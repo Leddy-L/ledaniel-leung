@@ -3,7 +3,7 @@
 	Description: home file for personal website.
 -->
 <!DOCTYPE html>
-<html>
+<html ng-app='personal'>
     <head>
 		<!-- TODO: update -->
         <title>Personal Website</title>
@@ -12,13 +12,13 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         
 		<!-- Load angular script -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
 		
 		<!-- Load local script -->
         <script type="text/javascript" src="/modules/main.js"></script>
     </head>
     
-    <body>
+    <body ng-app='personal'>
 		<div class="header">
 			<!-- include contact info here as well as a more detailed personal summary -->
 			<button><a href="#">About Me</a></button>
@@ -26,13 +26,11 @@
 			<button><a href="#">Portfolio</a></button>
 		
 		</div>
-        <div class="body">
-            <h1>LeDaniel Leung</h1>
+        <div class="body" ng-controller='Controller'>
+            <h1>{{ person.name }}</h1>
         
 			<!-- Personal Blurb -->
-			<p>
-				I am currently a sophomore at UCSD studying Computer Science and Cognitive Science with a focus in Human Computer Interaction. I am currently a Systems Engineer Intern at Northrop Grumman, and am looking to grow my skills as a software developer. My passion is to create software designed to improve the human experience with technology.
-			</p>
+			<p>{{ person.description }}</p>
         </div>
 		
     
