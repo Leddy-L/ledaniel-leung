@@ -1,24 +1,49 @@
 <!--Filename: index.html
-    Author: LeDaniel Leung
-    Description: home file for personal website.
+	Author: LeDaniel Leung
+	Description: home file for personal website.
 -->
 <!DOCTYPE html>
 <html>
     <head>
+		<!-- TODO: update -->
         <title>Personal Website</title>
+		
+		<!-- Load CSS -->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         
+		<!-- Load angular script -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		
+		<!-- Load local script -->
         <script type="text/javascript" src="/modules/main.js"></script>
-        
     </head>
     
     <body>
-        <div ng-app="personal">
+		<div class="header">
+			<!-- include contact info here as well as a more detailed personal summary -->
+			<button><a href="#">About Me</a></button>
+			<!-- include links to projects, and any technical skills-->
+			<button><a href="#">Portfolio</a></button>
+		
+		</div>
+        <div class="body">
             <h1>LeDaniel Leung</h1>
         
+			<!-- Personal Blurb -->
+			<p>
+				I am currently a sophomore at UCSD studying Computer Science and Cognitive Science with a focus in Human Computer Interaction. I am currently a Systems Engineer Intern at Northrop Grumman, and am looking to grow my skills as a software developer. My passion is to create software designed to improve the human experience with technology.
+			</p>
         </div>
+		
     
-    
+		<!-- for links to social media pages -->
+		<div class="footer">
+			<!-- TODO: update so that these are icons as opposed to words -->
+			<button id="_facebook"><a href="https://www.facebook.com/ledaniel.leung">Facebook</a></button>
+			<button id="_linkedin"><a href="https://www.linkedin.com/in/ledaniel-leung/">LinkedIn</a></button>
+			<button id="_github"><a href="https://github.com/Asianu">Github</a></button>
+		
+		</div>
     </body>
 
 

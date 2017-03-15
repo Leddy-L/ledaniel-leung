@@ -1,0 +1,90 @@
+/**	Filename: stylesheet.css
+ *	Author: LeDaniel Leung
+ *	Description: stylesheet for personal website.
+**/
+
+/* for personal colors */
+:root{
+	--color-dusty: #96858F;
+	--color-lavendar: #6D7993;
+	--color-overcast: #9099A2;
+	--color-paper: #D5D5D5;
+}
+
+/* District Thin */
+@font-face{
+	font-family: 'District Thin';
+	src: url('fonts/DistProTh.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Museo Sans Italic */
+@font-face{
+    font-family: 'Museo Sans Italic';
+    src: url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.eot');
+    src: url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.woff2') format('woff2'),
+         url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.woff') format('woff'),
+         url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+         url('fonts/MuseoSansItalic/MuseoSans_500_Italic-webfont.svg#museo_sans500_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Museo Sans */
+@font-face{
+    font-family: 'Museo Sans';
+    src: url('fonts/MuseoSans/MuseoSans_500-webfont.eot');
+    src: url('fonts/MuseoSans/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MuseoSans/MuseoSans_500-webfont.woff2') format('woff2'),
+         url('fonts/MuseoSans/MuseoSans_500-webfont.woff') format('woff'),
+         url('fonts/MuseoSans/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('fonts/MuseoSans/MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	
+}
+
+body{
+	font-family: 'District Thin', Arial, sans-serif;
+}
+
+.header{
+	position: absolute;
+	
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	
+	height: 100px;
+	margin: -10px -10px;
+	
+	background-color: var(--color-lavendar);
+	
+}
+
+.footer{
+	position: absolute;
+	
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+  
+	width: auto;
+	height: 100px;
+	
+	background-color: var(--color-lavendar);
+}
+
+body{
+	background-color: var(--color-paper);
+}
+
+div.body{
+	position: absolute;
+	
+	top: 20rem;
+	left: 5rem;
+	right: 20rem;
+}
