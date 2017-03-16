@@ -55,20 +55,27 @@ body{
 
 div{
 	position: absolute;
-	overflow: auto;
 	display: block;
 }
 
-div.body{
-	height: auto;
+.body{
+	top: 100px;
+	bottom: 100px;
+	left: 0px;
+	right: 0px;
 	
-	right: 67%;
-	top: 24em;
-	left: 4em;
-	bottom: auto;
+	overflow-y: scroll;
+}
+
+.info{
+	margin-top: 15%;
+	margin-bottom: 5%;
+	margin-left: 15%;
+	margin-right: 50%;
 }
 
 .header, .footer{
+	position: fixed;
 	width: 100%;
 	
 	right: 0px;
@@ -85,16 +92,19 @@ div.body{
 
 .footer{
 	bottom: 0px;
+	
 	padding-left: 4em;
 	text-align: left;
 	vertical-align: middle;
-	line-height: 150px;
+	line-height: 100px;
+	
 }
 
 /* button styling */
 .footer img{
 	height: 4em;
 	
+	padding-top: 1em;
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	
@@ -116,4 +126,17 @@ div.body{
 #_github{
 	height: 4.25em; /* this image is slightly smaller than the other two */
 	content: url(Icon-Github.png)
+}
+
+#_profile{
+	/* positioning */
+	margin-top: 12.5%;
+	margin-right: 15%;
+	margin-left: 60%;
+	overflow-x: hidden;
+	
+	/* size/content */
+	height: 16em;
+	border-radius: 50%;
+	content: url(Picture-Profile.jpg);
 }
