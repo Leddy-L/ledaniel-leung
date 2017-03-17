@@ -25,15 +25,15 @@
     <body ng-app="personal">
 		<div class="header">
 			<!-- include contact info here as well as a more detailed personal summary -->
-			<button><a href="#">About Me</a></button>
+			<a href="#"><button>About Me</button></a>
 			<!-- include links to projects, and any technical skills-->
-			<button><a href="#">Portfolio</a></button>
+			<a href="#"><button>Portfolio</button></a>
 		
 		</div>
         <div class="body" ng-controller="UserController">
 			<div class="info">
 				<h1>{{ person.name }}</h1>
-
+				
 				<!-- Personal Blurb -->
 				<p>{{ person.description }}</p>
 			</div>
