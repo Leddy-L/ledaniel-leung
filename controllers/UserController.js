@@ -15,7 +15,7 @@ angular.module('personal')
 			phone_number: '(858) 437 4481',
 			description: 'I am currently a sophomore at UCSD studying Computer Science\
 							and Cognitive Science with a focus in Human Computer Interaction.\
-							I am currently a Systems Engineer Intern at Northrop Grumman,\
+							I am an incoming Systems Engineer Intern at Northrop Grumman,\
 							and am looking to grow my skills as a software developer.\
 							My passion is to create software designed to improve the human\
 							experience with technology.'
