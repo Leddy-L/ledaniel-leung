@@ -3,8 +3,10 @@
  *	Description: stylesheet for personal website.
 **/
 
-/* for personal colors */
+/***************************** CONSTANTS *****************************/
 :root{
+
+/****************************** COLOURS ******************************/
 	--color-dusty: #96858F;
 	--color-lavendar: #6D7993;
 	--color-overcast: #9099A2;
@@ -14,9 +16,9 @@
 	--color-carbon: #A9A9A9;
 	--color-watermelon: #FF3B3F;
 	--color-neutral: #FEFEFE;
-	
 }
 
+/******************************* FONTS *******************************/
 /* District Thin */
 @font-face{
 	font-family: 'District Thin';
@@ -54,6 +56,7 @@
 	
 }
 
+/********************** GENERAL ELEMENT STYLING **********************/
 body{
 	font-family: 'District Thin', Arial, sans-serif;
 	background-color: var(--color-neutral);
@@ -95,7 +98,63 @@ a button{
 	white-space: nowrap;
 }
 
-.body{
+
+/************************ HOME PAGE ELEMENTS *************************/
+/**************** Shared styling for header & footer *****************/
+.navbar{
+	position: fixed;
+	width: 100%;
+	right: 0px;
+	left: 0px;
+	vertical-align: middle;
+	background-color: var(--color-carbon);
+}
+
+/******************* Styling for header + children *******************/
+#header{
+	height: 75px;
+	top: 0px;
+	text-align: right;
+	line-height: 50px;
+}
+
+#_home{
+	float: left;
+	font-size: 24px;
+}
+
+/******************* Styling for footer + children *******************/
+#footer{
+	height: 100px;
+	bottom: 0px;
+	padding-left: 2em;
+	text-align: left;
+	line-height: 100px;	
+}
+
+#_facebook{
+	height: 4em;
+	content: url(Icon-Facebook.png);
+}
+
+#_linkedin{
+	height: 3.875em; /* this icon is slightly */
+	content: url(Icon-LinkedIn.png);
+}
+
+#_github{
+	height: 4em;
+	content: url(Icon-Github.png);
+}
+
+#footer img{
+	margin-top: 1%;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+}
+
+/******************** Styling for body + children ********************/
+#body{
 	top: 75px;
 	bottom: 100px;
 	left: 0px;
@@ -106,6 +165,7 @@ a button{
 	overflow-y: scroll;
 }
 
+/**************** Styling for the HOME body template *****************/
 .info{
 	margin-top: 15%;
 	margin-bottom: 5%;
@@ -113,73 +173,14 @@ a button{
 	margin-right: 50%;
 	padding: 10px 40px;
 	background-color: var(--color-sky);
-	box-shadow: 8px 6px 20px 0 rgba(0,0,0,0.24), 
-		13px 11px 30px 0 rgba(0,0,0,0.19);
-}
-
-.header, .footer{
-	position: fixed;
-	width: 100%;
-	right: 0px;
-	left: 0px;
-	background-color: var(--color-carbon);
-}
-
-.header{
-	height: 75px;
-	top: 0px;
-	text-align: right;
-	vertical-align: middle;
-	line-height: 50px;
-}
-
-#_home{
-	float: left;
-	font-size: 24px;
-}
-
-.footer{
-	height: 100px;
-	bottom: 0px;
-	padding-left: 4em;
-	text-align: left;
-	vertical-align: middle;
-	line-height: 100px;
-	
-}
-
-/* button styling */
-.footer img{
-	height: 4em;
-	padding-top: 1em;
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	display: inline;
-}
-
-#_facebook{
-	content: url(Icon-Facebook.png);
-}
-
-#_linkedin{
-	content: url(Icon-LinkedIn.png);
-}
-
-#_github{
-	height: 4.25em; /* this image is slightly smaller than the other two */
-	content: url(Icon-Github.png);
+	box-shadow: 8px 6px 20px 0px rgba(0,0,0,0.24), 
+		17px 11px 50px 0px rgba(0,0,0,0.19);
 }
 
 #_profile{
-	/* positioning */
 	margin-top: 12.5%;
 	margin-right: 15%;
 	margin-left: 60%;
-	overflow-x: hidden;
-	
-	/* shadow behind image
-	box-shadow: 0px 0px 5px 8px var(--color-watermelon);
-	*/
 	
 	box-shadow: 8px 6px 20px 0 rgba(0,0,0,0.24), 
 		13px 11px 30px 0 rgba(0,0,0,0.19);

@@ -23,7 +23,7 @@
     </head>
     
     <body ng-app="personal">
-		<div class="header">
+		<div class="navbar" id="header">
 			<!-- be able to redirect to home page -->
 			<a href="index.html"><button id="_home">LeDaniel Leung</button></a>
 			<!-- include contact info here as well as a more detailed personal summary -->
@@ -32,7 +32,8 @@
 			<a href="#"><button>Portfolio</button></a>
 		
 		</div>
-        <div class="body" ng-controller="UserController">
+		
+        <div id="body" ng-controller="UserController">
 			<div class="info">
 				<h1>{{ person.name }}</h1>
 				
@@ -45,7 +46,7 @@
 		
     
 		<!-- for links to social media pages -->
-		<div class="footer" ng-controller="LinkController">
+		<div class="navbar" id="footer" ng-controller="LinkController">
 			<a href="{{ facebook }}"><img id="_facebook"/></a>
 			<a href="{{ linkedin }}"><img id="_linkedin"/></a>
 			<a href="{{ github }}"><img id="_github"/></a>
