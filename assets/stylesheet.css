@@ -133,17 +133,29 @@ a button{
 
 #_facebook{
 	height: 4em;
-	content: url(Icon-Facebook.png);
+	content: url(Icons/Icon-Facebook.png);
+}
+
+#_facebook:hover{
+	content: url(Icons/Red/Icon-Facebook-Red.png)
 }
 
 #_linkedin{
 	height: 3.875em; /* this icon is slightly */
-	content: url(Icon-LinkedIn.png);
+	content: url(Icons/Icon-LinkedIn.png);
+}
+
+#_linkedin:hover{
+	content: url(Icons/Red/Icon-LinkedIn-Red.png);
 }
 
 #_github{
 	height: 4em;
-	content: url(Icon-Github.png);
+	content: url(Icons/Icon-Github.png);
+}
+
+#_github:hover{
+	content: url(Icons/Red/Icon-Github-Red.png);
 }
 
 #footer img{
