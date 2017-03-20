@@ -199,3 +199,8 @@ a button{
 	border-radius: 50%;
 	content: url(Picture-Profile.jpg);
 }
+
+/*********************** got rid of scrollbars ***********************/
+::-webkit-scrollbar{
+	display: none;
+}
