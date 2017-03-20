@@ -4,36 +4,36 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<!-- TODO: update -->
-        <title>Personal Website</title>
+		<title>Personal Website</title>
 		
 		<!-- Load CSS -->
-        <link rel="stylesheet" type="text/css" href="../assets/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheet.css">
         
-		<!-- Load angular script -->
-        <script 
-			src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js">
+		<!-- Load angular scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js">
 		</script>
 		
 		<!-- Load local script -->
-        <script type="text/javascript" src="/modules/main.js"></script>
-        <script type="text/javascript" src="/controllers/LinkController.js"></script>
-        <script type="text/javascript" src="/controllers/UserController.js"></script>
-    </head>
+		<script type="text/javascript" src="/modules/main.js"></script>
+		<script type="text/javascript" src="/controllers/LinkController.js"></script>
+		<script type="text/javascript" src="/controllers/UserController.js"></script>
+	</head>
     
-    <body ng-app="personal">
+	<body ng-app="personal">
 		<div class="navbar" id="header">
 			<!-- be able to redirect to home page -->
-			<a href="index.html"><button id="_home">LeDaniel Leung</button></a>
+			<a href="#"><button id="_home">LeDaniel Leung</button></a>
 			<!-- include contact info here as well as a more detailed personal summary -->
 			<a href="#"><button>About Me</button></a>
 			<!-- include links to projects, and any technical skills-->
 			<a href="#"><button>Portfolio</button></a>
-		
 		</div>
 		
-        <div id="body" ng-controller="UserController">
+		<div id="body" ng-controller="UserController">
 			<div class="info">
 				<h1>{{ person.name }}</h1>
 				
@@ -42,16 +42,13 @@
 			</div>
 			
 			<img id="_profile"/>
-        </div>
+		</div>
 		
-    
 		<!-- for links to social media pages -->
 		<div class="navbar" id="footer" ng-controller="LinkController">
 			<a href="{{ facebook }}"><img id="_facebook"/></a>
 			<a href="{{ linkedin }}"><img id="_linkedin"/></a>
 			<a href="{{ github }}"><img id="_github"/></a>
 		</div>
-    </body>
-
-
+	</body>
 </html>

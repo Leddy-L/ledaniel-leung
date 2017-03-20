@@ -65,7 +65,6 @@ body{
 
 div{
 	position: absolute;
-	display: block;
 }
 
 button{
@@ -159,8 +158,6 @@ a button{
 	bottom: 100px;
 	left: 0px;
 	right: 0px;
-	
-	position: inline-block;
 	
 	overflow-y: scroll;
 }

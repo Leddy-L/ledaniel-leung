@@ -3,4 +3,6 @@
  *	Description: angular module to be used for the website.
 **/
 
-var app = angular.module('personal', []);
+var app = angular.module('personal', ['ngRoute']);
+
+/* TODO: get routing */
