@@ -21,26 +21,25 @@
 		<script type="text/javascript" src="/modules/main.js"></script>
 		<script type="text/javascript" src="/controllers/LinkController.js"></script>
 		<script type="text/javascript" src="/controllers/UserController.js"></script>
+		<script type="text/javascript" src="/controllers/ViewController.js"></script>
 	</head>
     
-	<body ng-app="personal">
+	<body ng-app="personal" ng-controller="ViewController">
 		<div class="navbar" id="header">
 			<!-- be able to redirect to home page -->
-			<a href="#"><button id="_home">LeDaniel Leung</button></a>
+			<a href="#"><button id="_home" ng-click="update('home')">LeDaniel Leung</button></a>
 			<!-- include contact info here as well as a more detailed personal summary -->
-			<a href="#"><button>About Me</button></a>
+			<a href="#"><button ng-click="update('about')">About Me</button></a>
 			<!-- include links to projects, and any technical skills-->
-			<a href="#"><button>Portfolio</button></a>
+			<a href="#"><button ng-click="update('portfolio')">Portfolio</button></a>
 		</div>
 		
-		<div id="body" ng-controller="UserController">
+		<div ng-show="page=='home'" id="body" ng-controller="UserController">
 			<div class="info">
 				<h1>{{ person.name }}</h1>
-				
 				<!-- Personal Blurb -->
 				<p>{{ person.description }}</p>
 			</div>
-			
 			<img id="_profile"/>
 		</div>
 		
