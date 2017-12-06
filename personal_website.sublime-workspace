@@ -1,0 +1,279 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"test",
+				"test_testing"
+			],
+			[
+				"acquire",
+				"acquiredExtension"
+			],
+			[
+				"User",
+				"UserProcess"
+			],
+			[
+				"user",
+				"userprog"
+			],
+			[
+				"alarm",
+				"alarmTest4"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 11981,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/vm/VMProcess.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/proj2/nachos_fa17_Asianu_cariswei_jonahcruz97.raw",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/exit1.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Lock.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/helloWorld.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/join1.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/Processor.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/KThread.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/ThreadedKernel.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/write10.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/write4.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/write2.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/userTest1.c",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/test/write1.c",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/MATH 103A/Homework/Homework 6/Homework 6.tex",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/OpenFileWithPosition.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/OpenFile.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/StubFileSystem.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/userprog/SynchConsole.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/Kernel.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/MATH 103A/Homework/Homework 5/Homework 5.tex",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/Machine.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Condition2.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Condition.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Semaphore.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Communicator.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/Alarm.java",
+		"/Users/asianu/Projects/Scratch/hw2.cpp",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/machine/Interrupt.java",
+		"/Users/asianu/Projects/nachos_fa17_Asianu_cariswei_jonahcruz97/nachos/threads/ThreadQueue.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/threads/Alarm.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/COGS 187A/Project 2/Website/img/portfolio/fullsize/Thoughtstem.svg",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/threads/KThread.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/threads/ThreadQueue.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/threads/ThreadedKernel.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Interrupt.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Machine.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/threads/Scheduler.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Timer.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/ag/AutoGrader.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/TCB.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/security/Privilege.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/Makefile",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/proj1/Makefile",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Stats.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Lib.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/CSE 120/Programs/cs120fch/nachos/machine/Config.java",
+		"/Users/asianu/Google Drive/UCSD/2017-18 Junior/Fall/MATH 103A/Homework/Homework 1/Homework 1.tex",
+		"/Users/asianu/Google Drive/UCSD/2016-17 Sophomore/Spring/MATH 109/Homework/Homework 8/Homework 8.tex",
+		"/Users/asianu/Google Drive/UCSD/2016-17 Sophomore/Spring/MATH 109/Homework/Homework 1/Homework 1.tex",
+		"/Users/asianu/Documents/Python/Practice/test.py",
+		"/Users/asianu/Google Drive/UCSD/2016-17 Sophomore/Spring/MATH 109/Homework/Homework 6/Homework 6.tex",
+		"/Users/asianu/Documents/Fonts/Museo Sans 500-Webfont/Webfonts/museosans_500_macroman/stylesheet.css",
+		"/Users/asianu/Documents/Fonts/Museo Sans 500 Italic-Webfont/Webfonts/museosans_500italic_macroman/stylesheet.css",
+		"/Users/asianu/Documents/Terminal Themes/solarized/README.md",
+		"/Users/asianu/Downloads/Museo Sans 500-Webfont/Webfonts/museosans_500_macroman/stylesheet.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 178.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
