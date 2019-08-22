@@ -1,3 +1,9 @@
 /* file that houses personal styles outside of Bootstrap's native API */
 
+#masthead {
+	padding-top: 2em;
+	max-height:30px;
+}
 
+img {
+}
