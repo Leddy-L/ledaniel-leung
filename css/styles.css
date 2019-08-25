@@ -1,9 +1,16 @@
 /* file that houses personal styles outside of Bootstrap's native API */
 
 header {
-	padding-top: 8em;
+	/* top padding is bottom padding + 1.5 due to navbar */
+	margin-top: 3em;
+	padding: 4em 0em 5.5em;
+	background-color: #a5cce9;
 }
 
 img {
 	max-height: 360px;
+}
+
+#landing-profile {
+	height: 240px;
 }
