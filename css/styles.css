@@ -4,11 +4,15 @@ header {
 	/* top padding is bottom padding + 1.5 due to navbar */
 	margin-top: 3em;
 	padding: 4em 0em 5.5em;
-	background-color: #a5cce9;
+	/*background-color: #a5cce9;*/
 }
 
 img {
-	max-height: 360px;
+	max-height: 1024px;
+}
+
+img.card-img-top {
+	
 }
 
 #landing-profile {
