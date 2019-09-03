@@ -11,10 +11,77 @@ img {
 	max-height: 1024px;
 }
 
-img.card-img-top {
-	
-}
-
 #landing-profile {
 	height: 240px;
+}
+
+/* Timeline CSS */
+.timeline {
+	line-height: 1.42em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	h1, h2, h3, h4, h5, h6 {
+		line-height: inherit;
+	}
+}
+
+.timeline-item {
+	padding-left: 40px;
+	position: relative;
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.timeline-info {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0 0 .5em 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.timeline-marker {
+	position: asbolute;
+	top: 0; bottom: 0; left: 0;
+	width: 15px;
+	&:before {
+		/* blue dot */
+		background: #5C80A9;
+		border: 3px solid transparent;
+		border-radius: 100%;
+		content: "";
+		display: block;
+		height: 15px;
+		width: 15px;
+		position: absolute;
+		top: 4px; left: 0;
+		transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+	}
+	&:after {
+		content: "";
+		width: 3px;
+		/* grey bar */
+		background: #CCD5DB;
+		display: block;
+		position: absolute;
+		top: 24px; bottom: 0; left: 6px;
+	}
+	.timeline-item:last-child &:after {
+		content: none;
+	}
+}
+.timeline-item:not(.period):hover .timeline-marker:before {
+	background: transparent;
+	border: 3px solid #5C80A9;
+}
+
+.timeline-content {
+	padding-bottom: 40px;
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
