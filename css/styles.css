@@ -8,6 +8,9 @@ header {
 img {
   max-height: 1024px; }
 
+#skills i {
+  font-size: 64px; }
+
 #landing-profile {
   height: 240px; }
 
