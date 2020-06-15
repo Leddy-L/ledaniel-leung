@@ -8,7 +8,7 @@ email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
 @import url("styles.css");
 ------------------------------------------------------------------------------*/
-/*  Remove padding and margin */
+/*  Creating default values by clearing variables and setting constants */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ website:    asianu.github.io
   float: left; }
 
 body {
-  font: 62.5%/1.5 "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  font: 62.5%/1.5 "Lato", sans-serif;
   color: #000000;
   text-align: center; }
 
@@ -45,5 +45,38 @@ h5 {
 
 p {
   font-size: 1.2em; }
+
+/* Global classes */
+.container {
+  width: 100%;
+  height: 100%; }
+
+nav {
+  width: 100%;
+  height: 8em;
+  position: fixed;
+  background-color: white; }
+  nav ul {
+    height: 100%; }
+  nav li {
+    height: 100%;
+    line-height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center; }
+    nav li a {
+      color: black;
+      text-decoration: none; }
+  nav .nav-brand {
+    padding-left: 1.5em;
+    font-size: 2.4em; }
+  nav .nav-item {
+    padding: 0em 1.5em;
+    font-size: 1.6em; }
+  nav .nav-item:nth-child(2) {
+    padding: 0em 3em 0em 1.5em; }
+
+header {
+  padding-top: 8em; }
 
 /*# sourceMappingURL=styles.css.map */
