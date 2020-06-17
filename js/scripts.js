@@ -11,11 +11,14 @@ website:    asianu.github.io
 
 $(document).ready(function() {
 
-$("h1").hover(function() {
-	$(this).fadeOut(1000);
-});
-$("h2").click(function() {
-	$("h1").fadeIn(2000);
+$(window).scroll(function() {
+
+	if($(window).scrollTop() > 15) {
+		$("nav .container").addClass("nav-shadow");
+	}
+	else {
+		$("nav .container").removeClass("nav-shadow");
+	}
 });
 
 });
