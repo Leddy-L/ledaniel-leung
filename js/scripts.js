@@ -13,11 +13,11 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
 
-	if($(window).scrollTop() > 15) {
-		$("nav .container").addClass("nav-shadow");
-	}
-	else {
-		$("nav .container").removeClass("nav-shadow");
+	if($(window).scrollTop() < 20) {
+
+		$("nav .container").css("box-shadow", 
+			"0px 0px 10px rgba(0, 0, 0, " + 
+			($(window).scrollTop() * .015) + ")");
 	}
 });
 
