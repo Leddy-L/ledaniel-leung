@@ -13,11 +13,15 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
 
-	if($(window).scrollTop() < 20) {
+	if($(window).scrollTop() < 60) {
 
 		$("nav .container").css("box-shadow", 
 			"0px 0px 10px rgba(0, 0, 0, " + 
-			($(window).scrollTop() * .015) + ")");
+			($(window).scrollTop() * .005) + ")");
+	}
+	else {
+		$("nav .container").css("box-shadow",
+			"0px 0px 10px rgba(0, 0, 0, .3)");
 	}
 });
 
