@@ -108,40 +108,41 @@ header {
 
 /* Experience Styling */
 #experience {
-  padding: 5em 0em; }
+  padding: 8em 0em; }
   #experience .projects {
     height: 100%;
     width: 50%;
     justify-content: space-between; }
     #experience .projects .project-card {
-      height: 36em;
+      height: 32em;
       margin: 0em 2em;
       flex: 1 1 auto; }
     #experience .projects .project-card.wide {
       flex-grow: 2; }
   #experience h1 {
-    margin-top: 3.5em; }
+    margin-top: 3em; }
   #experience h2 {
     color: grey; }
 
 #launchpad {
-  background-color: #FFA0D5;
-  background-image: url("../img/Macbook - Camellia Rd.png");
+  background-color: #FFC2E4;
+  background-image: url("../img/Macbook - Launchpad.png");
   background-size: contain;
-  background-position: 0em 20em;
+  background-position: 0em 16em;
   background-repeat: no-repeat; }
 
 #camelliard {
-  background-color: #E4C8AD;
-  background-image: url("../img/Macbook - Launchpad.png");
+  background-color: #EDDED4;
+  background-image: url("../img/Macbook - Camellia Rd.png");
   background-size: contain;
-  background-position: 0em 20em;
+  background-position: 0em 16em;
   background-repeat: no-repeat; }
 
 #northrop {
-  background-color: #4B65C5;
-  background-size: contain;
-  background-position: 0em 20em;
+  background-color: #D1D8F0;
+  background-image: url("../img/NG-logo-large.png");
+  background-size: 60em;
+  background-position: center center;
   background-repeat: no-repeat; }
 
 /*# sourceMappingURL=styles.css.map */
