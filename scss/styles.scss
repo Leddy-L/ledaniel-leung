@@ -44,7 +44,6 @@ $mq-retina:     "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 }
 
 .row {
-    margin-bottom: 4em;
     height: auto;
     width: 100%;
     display: flex;
@@ -161,7 +160,6 @@ header {
 
 }
 
-
 /* Experience Styling */
 
 #experience {
@@ -173,6 +171,13 @@ header {
 
         justify-content: space-between;
 
+        .row {
+            margin-bottom: 4em;
+        }
+
+        .row:last-child {
+            margin-bottom: 0em;
+        }
 
         .project-card {
             height: 32em;
@@ -192,6 +197,8 @@ header {
 
     h2 {
         color: grey;
+        font-weight: normal;
+        font-size: 1.6em;
     }
 
 }
@@ -220,3 +227,14 @@ header {
     background-repeat: no-repeat;
 }
 
+/* Footer Styling */
+
+footer {
+    .contact-circle {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+
+        border: black solid 1px;
+    }
+}
