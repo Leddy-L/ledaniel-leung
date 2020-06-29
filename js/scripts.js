@@ -11,18 +11,26 @@ website:    asianu.github.io
 
 $(document).ready(function() {
 
-$(window).scroll(function() {
+	//	resets page scroll to top of page on page refresh
+	/*
+	$(window).on('beforeunload', function() {
+		$(window).scrollTop(0);
+	});
+	*/
 
-	if($(window).scrollTop() < 60) {
+	//	animates navbar shadow depending on scroll height of window
+	$(window).scroll(function() {
 
-		$("nav .container").css("box-shadow", 
-			"0px 0px 10px rgba(0, 0, 0, " + 
-			($(window).scrollTop() * .005) + ")");
-	}
-	else {
-		$("nav .container").css("box-shadow",
-			"0px 0px 10px rgba(0, 0, 0, .3)");
-	}
-});
+		if($(window).scrollTop() < 60) {
+
+			$("nav .container").css("box-shadow", 
+				"0px 0px 10px rgba(0, 0, 0, " + 
+				($(window).scrollTop() * .005) + ")");
+		}
+		else {
+			$("nav .container").css("box-shadow",
+				"0px 0px 10px rgba(0, 0, 0, .3)");
+		}
+	});
 
 });
