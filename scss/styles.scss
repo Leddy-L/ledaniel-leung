@@ -44,8 +44,6 @@ $mq-retina:     "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 }
 
 .row {
-    height: auto;
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -163,7 +161,7 @@ header {
 /* Experience Styling */
 
 #experience {
-    padding: 8em 0em;
+    padding: 4em 0em;
 
     .projects{
         height: 100%;
@@ -230,11 +228,19 @@ header {
 /* Footer Styling */
 
 footer {
-    .contact-circle {
-        width: 5em;
-        height: 5em;
+    padding-bottom: 2em;
+
+    a.contact-circle {
+        margin: 0em 1em;
+        display: flex;
+        width: 5.75em;
+        height: 5.75em;
         border-radius: 50%;
 
-        border: black solid 1px;
+        text-decoration: none;
+        justify-content: center;
+        overflow: hidden;
+
+        background-color: #5C5C5C;
     }
 }
