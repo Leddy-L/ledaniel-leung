@@ -156,7 +156,6 @@ header p {
   flex-grow: 2;
 }
 #experience .projects .project-card:hover {
-  cursor: pointer;
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
   box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1), 4px 4px 16px rgba(0, 0, 0, 0.15);
