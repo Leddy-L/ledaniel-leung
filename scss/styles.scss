@@ -181,10 +181,21 @@ header {
             height: 32em;
             margin: 0em 2em;
             flex: 1 1 auto;
+            box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1);
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .project-card.wide {
             flex-grow: 2;
+        }
+
+        .project-card:hover {
+            cursor: pointer;
+            -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+            box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1), 
+                        4px 4px 16px rgba(0, 0, 0, .15);
         }
 
     }
@@ -233,8 +244,8 @@ footer {
     a.contact-circle {
         margin: 0em 1em;
         display: flex;
-        width: 5.75em;
-        height: 5.75em;
+        width: 4.5em;
+        height: 4.5em;
         border-radius: 50%;
 
         text-decoration: none;
