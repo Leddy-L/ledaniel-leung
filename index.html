@@ -1,301 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<!-- Required meta tags -->
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Personal website">
     <meta name="author" content="LeDaniel Leung">
 
     <title>LeDaniel Leung</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-    <!-- Plugin CSS -->
-    <!--link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"-->
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/7bb9a2b3e0.js" crossorigin="anonymous"></script>
 
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">LeDaniel</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav>
+    	<div class="container">
+	    	<ul>
+		    	<li class="nav-brand left"><a href="#">LeDaniel Leung</a></li>
+
+		    	<!-- These show up in reverse order -->
+		    	<li class="nav-item right"><a href="#about">About</a></li>
+		    	<li class="nav-item right"><a href="#experience">Experience</a></li>
+		    </ul>
+		</div>
     </nav>
 
-    <!-- opening page -->
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">LeDaniel Leung</h1>
-          <hr>
-					<p><strong>Software developer</strong> keen on improving the
-						<strong>user experience</strong> with technology. Seeking to
-						develop my skills as a <strong>programmer</strong>,
-						<strong>designer</strong>, and <strong>analyst</strong>.
-						<em>Never stops <strong>learning</strong></em>.</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About Me</a>
-        </div>
-      </div>
+    <header>
+    	<div class="container centered">
+    		<h1>
+    			<em><strong>HI THERE,</strong></em>
+    		</h1>
+    		<p>
+    			I'm LeDaniel, and <strong>people</strong> are my <strong>passion</strong>.
+    		</p>
+    	</div>
     </header>
 
-    <!-- about page -->
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Who I Am</h2>
-            <hr class="light">
-            <p class="text-faded">I am a third year student at UCSD studying Computer Science and Cognitive Science with a focus in Human Computer Interaction. I am currently a Systems Engineer Intern at Northrop Grumman, and am growing my knowledge in the areas of software development, application design, and data analytics. I create software designed to improve the human experience with technology.</p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">What I Do</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container centered" id="experience">
+    	<div class="projects">
+    		<div class="row">
+		    	<div class="project-card" id="launchpad">
+		    		<h1 class="project-title">
+		    			Launchpad
+		    		</h1>
+		    		<h2 class="project-subtitle">
+		    			UCSD COGS 120
+		    		</h2>
+		    	</div>
 
-    <!-- skills page -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Skillset</h2>
-            <hr class="primary">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-html5 text-primary sr-icons"></i>
-							<i class="fa fa-4x fa-css3 text-primary sr-icons"></i>
-              <h3>HTML5 & CSS3</h3>
-              <p class="text-muted">Experienced in developing and designing streamlined websites.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-code text-primary sr-icons"></i>
-              <h3>Software Developer</h3>
-              <p class="text-muted">Proficient in Java, C++, and Python for application development.</p>
-            </div>
-          </div>
-					<div class="col-lg col-md-6 text-center">
-						<div class="service-box">
-							<i class="fa fa-4x fa-database text-primary sr-icons"></i>
-							<h3>Data Science</h3>
-							<p class="text-muted">Knowledge of basic databases and data mining techniques. Proficient in Python for data analysis.</p>
-						</div>
-					</div>
-					<!--
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-file-excel-o text-primary sr-icons"></i>
-              <h3>Microsoft Excel</h3>
-              <p class="text-muted">Skilled in organizing functional and efficient spreadsheets.</p>
-            </div>
-          </div>
-					-->
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-users text-primary sr-icons"></i>
-              <h3>Leadership</h3>
-              <p class="text-muted">Ability to lead groups in completing tasks efficiently.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		    	<div class="project-card" id="camelliard">
+		    		<h1 class="project-title">
+		    			Camellia Rd
+		    		</h1>
+		    		<h2 class="project-subtitle">
+		    			UCSD COGS 187B
+		    		</h2>
+		    	</div>
+	        </div>
 
-    <!-- portfolio page -->
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid">
-        <div class="row no-gutter">
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <img class="img-fluid" src="img/portfolio/fullsize/Northrop Grumman.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Experience
-                  </div>
-                  <div class="project-name">
-                    College Technical Intern
-                  </div>
-									<div class="project-description">
-										As an intern, I worked alongside senior systems engineers to record, analyze, and report data on test failures. I assisted in the process of improving yields reports by generating trendlines to track the largest occuring system failures. These reports provided a better understanding of the bigger problems that affected the manufacturing line and allowed lead engineers to decide the best course of action.
-									</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-					<div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-							<a href="http://ziconnect.herokuapp.com/home">
-              <img class="img-fluid" src="img/portfolio/fullsize/Ziconnect.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Project - Ziconnect
-                  </div>
-                  <div class="project-name">
-                    Developer
-                  </div>
-									<div class="project-description">
-										As a project team member, I developed a calendar app with a team of 10 individuals looking to solve the problem of group scheduling. Ziconnect works to enhance the user experience with event-planning by bringing peace of mind to its users. Our application allows groups to form events, organize car rides, and facilitate potluck-style gatherings. We used HTML/CSS as our front-end, AngularJS for our back-end, and FireBase as our database. See more by clicking on this panel.
-									</div>
-                </div>
-              </div>
-							</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <a href="https://medium.com/@l6leung/music-player-redesign-fde8b9b9afd4">
-              <img class="img-fluid" src="img/portfolio/fullsize/Redesign.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Project - Music Redesign
-                  </div>
-                  <div class="project-name">
-                    Developer
-                  </div>
-                  <div class="project-description">
-                    As a project member, I worked in a group of 4 to interview, discover, and recreate part of a music streaming app. In this project, we compared the existing apps to come up with our improved design: Spotify, Soundcloud, and Apple Music. Our redesign is created using the prototyping software Axure. See more by clicking on this panel.
-                  </div>
-                </div>
-              </div>
-              </a>
-            </div>
-          </div>
-
-					<div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <img class="img-fluid" src="img/portfolio/fullsize/Excel.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Project - Finance Tracker
-                  </div>
-                  <div class="project-name">
-                    Finance Tracker - Excel
-                  </div>
-									<div class="project-description">
-										As a data analyst, I independently develop spreadsheets for tracking finances, visualizing trend lines in budgets, and improving overall user awareness of personal expenses and incomes.
-									</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 
-            This section is commented out because I did not find it important to display
-            this information.
-          -->
-          <!--
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <img class="img-fluid" src="img/portfolio/fullsize/Thoughtstem.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Experience
-                  </div>
-                  <div class="project-name">
-                    Mentor
-                  </div>
-                  <div class="project-description">
-                    As a class mentor, I helped the lead teachers at this summer camp teach basic computer science to elementary to middle school students. We taught various fields of computer science and electrical engineering, from the fundamentals of object-oriented programming to basic circuit design. The goal was to develop a passion for computer science and egineering early on in the kids' lives.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          -->
-        </div>
-      </div>
-    </section>
-
-    <!-- more & contact sections -->
-    <div class="call-to-action bg-dark">
-      <div class="container text-center">
-        <h2>More</h2>
-        <a class="btn btn-default btn-icon sr-button" href="https://www.facebook.com/ledaniel.leung">
-					<i class="fa fa-2x fa-facebook text-primary sr-icons"></i>
-				</a>
-				<a class="btn btn-default btn-icon sr-button" href="https://www.linkedin.com/in/ledaniel-leung/">
-					<i class="fa fa-2x fa-linkedin text-primary sr-icons"></i>
-				</a>
-				<a class="btn btn-default btn-icon sr-button" href="https://github.com/Asianu">
-					<i class="fa fa-2x fa-github-alt text-primary sr-icons"></i>
-				</a>
-      </div>
+	        <div class="row">
+		    	<div class="project-card wide" id="northrop">
+		    	</div>
+		    </div>
+    	</div>
     </div>
 
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-						<h2 class="section-heading">Get in Touch</h2>
-            <hr class="primary">
-            <p>Interested in the work that I've done? Check out my <a href="img/portfolio/Resume%202017.pdf" target="_blank">resume</a> or contact me below!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-            <p>
-              <a href="mailto:ledaniel.leung@gmail.com">Email Me</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <footer>
+    	<div class="container centered" id="contacts">
+            <div class="row">
+                <a class="contact-circle centered" href="https://www.linkedin.com/in/ledaniel-leung">
+                    <i class="fab fa-linkedin-in fa-inverse fa-2x"></i>
+                </a>
+                <a class="contact-circle centered" href="https://github.com/Asianu">
+    				<i class="fab fa-github-alt fa-inverse fa-2x"></i>
+                </a>
+                <a class="contact-circle centered" href="mailto: ledaniel.leung@gmail.com">
+                    <i class="fas fa-envelope fa-inverse fa-2x"></i>
+                </a>
+            </div>
+    	</div>
+    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
+    <!-- Javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
 
   </body>
 

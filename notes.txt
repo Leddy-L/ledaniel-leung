@@ -1,0 +1,20 @@
+This is a list of notes that I am taking on observations of some of the
+cleanest websites that I saw on cofolios.com.
+
+-	White background with square/grid tiles to showcase projects
+	*	Simple/no patterns
+-	Navbar was simple
+-	Tiles had hover-over effects that animate or provide information about
+	the project
+	*	Designs of the tiles brought to life the assignment
+	*	A lot of experience related things
+-	Two pages
+	1)	Landing page
+		*	Short description
+		*	Projects
+			^	Squares + hover effects
+		*	Contact (Footer)
+	2)	About page
+		*	Personal statement
+
+
