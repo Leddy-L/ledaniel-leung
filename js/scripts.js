@@ -12,11 +12,9 @@ website:    asianu.github.io
 $(document).ready(function() {
 
 	//	resets page scroll to top of page on page refresh
-	/*
 	$(window).on('beforeunload', function() {
 		$(window).scrollTop(0);
 	});
-	*/
 
 	//	animates navbar shadow depending on scroll height of window
 	$(window).scroll(function() {
@@ -32,5 +30,15 @@ $(document).ready(function() {
 				"0px 0px 10px rgba(0, 0, 0, .3)");
 		}
 	});
+
+	//	change colors of footer elements on hover
+	$(".contact-circle").mouseenter(function() {
+		var tmp =  "'" + $(this).attr('href') + "'";
+		$(".contact-circle[href!=" + tmp + "]").css("background-color", "#ADADAD");
+	});
+
+	$(".contact-circle").mouseleave(function() {
+		$(".contact-circle").css("background-color", "#5C5C5C");
+	})
 
 });
