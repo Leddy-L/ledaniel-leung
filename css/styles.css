@@ -12,162 +12,202 @@ website:    asianu.github.io
 * {
   margin: 0;
   padding: 0;
-  border: 0; }
+  border: 0;
+}
 
 .clear {
-  clear: both; }
+  clear: both;
+}
 
 .right {
-  float: right; }
+  float: right;
+}
 
 .left {
-  float: left; }
+  float: left;
+}
 
 .row {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+}
 
 .row:last-child {
-  margin-bottom: 0em; }
+  margin-bottom: 0em;
+}
 
 body {
   font: 62.5%/1.5 "Lato", sans-serif;
   color: #000000;
-  text-align: center; }
+  text-align: center;
+}
 
 h1 {
-  font-size: 2.2em; }
+  font-size: 2.2em;
+}
 
 h2 {
-  font-size: 2.0em; }
+  font-size: 2em;
+}
 
 h3 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+}
 
 h4 {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+}
 
 h5 {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+}
 
 p {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /* Global classes */
 .container {
   display: flex;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .centered {
   align-items: center;
   align-content: center;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+}
 
 /* Navbar styling */
 nav {
   width: 100%;
   height: 8em;
   position: fixed;
-  background-color: white; }
-  nav ul {
-    width: 100%;
-    height: 100%; }
-  nav li {
-    height: 100%;
-    line-height: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center; }
-    nav li a {
-      color: black;
-      text-decoration: none; }
-  nav .nav-brand {
-    padding-left: 1.5em;
-    font-size: 2.4em; }
-  nav .nav-item {
-    padding: 0em 1.5em;
-    font-size: 1.6em; }
-  nav .nav-item:nth-child(2) {
-    padding: 0em 3em 0em 1.5em; }
-  nav .nav-shadow {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22); }
+  background-color: white;
+}
+nav ul {
+  width: 100%;
+  height: 100%;
+}
+nav li {
+  height: 100%;
+  line-height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+nav .nav-brand {
+  padding-left: 1.5em;
+  font-size: 2.4em;
+}
+nav .nav-item {
+  padding: 0em 1.5em;
+  font-size: 1.6em;
+}
+nav .nav-item:nth-child(2) {
+  padding: 0em 3em 0em 1.5em;
+}
+nav .nav-shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+}
 
 /* Header Styling */
 header {
   width: 100%;
   height: 25em;
-  padding-top: 24em; }
-  header h1 {
-    font-size: 4.8em; }
-  header p {
-    font-size: 1.6em; }
+  padding-top: 24em;
+}
+header h1 {
+  font-size: 4.8em;
+}
+header p {
+  font-size: 1.6em;
+}
 
 /* Experience Styling */
 #experience {
-  padding: 4em 0em; }
-  #experience .projects {
-    height: 100%;
-    width: 50%;
-    justify-content: space-between; }
-    #experience .projects .row {
-      margin-bottom: 4em; }
-    #experience .projects .row:last-child {
-      margin-bottom: 0em; }
-    #experience .projects .project-card {
-      height: 32em;
-      margin: 0em 2em;
-      flex: 1 1 auto;
-      box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1);
-      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
-    #experience .projects .project-card.wide {
-      flex-grow: 2; }
-    #experience .projects .project-card:hover {
-      cursor: pointer;
-      -webkit-transform: scale(1.05, 1.05);
-      transform: scale(1.05, 1.05);
-      box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1), 4px 4px 16px rgba(0, 0, 0, 0.15); }
-  #experience h1 {
-    margin-top: 3em; }
-  #experience h2 {
-    color: grey;
-    font-weight: normal;
-    font-size: 1.6em; }
+  padding: 4em 0em;
+}
+#experience .projects {
+  height: 100%;
+  width: 50%;
+  justify-content: space-between;
+}
+#experience .projects .row {
+  margin-bottom: 4em;
+}
+#experience .projects .row:last-child {
+  margin-bottom: 0em;
+}
+#experience .projects .project-card {
+  height: 32em;
+  margin: 0em 2em;
+  flex: 1 1 auto;
+  box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#experience .projects .project-card.wide {
+  flex-grow: 2;
+}
+#experience .projects .project-card:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1), 4px 4px 16px rgba(0, 0, 0, 0.15);
+}
+#experience h1 {
+  margin-top: 3em;
+}
+#experience h2 {
+  color: grey;
+  font-weight: normal;
+  font-size: 1.6em;
+}
 
 #launchpad {
   background-color: #FFC2E4;
   background-image: url("../img/Macbook - Launchpad.png");
   background-size: contain;
   background-position: 0em 16em;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 #camelliard {
   background-color: #EDDED4;
   background-image: url("../img/Macbook - Camellia Rd.png");
   background-size: contain;
   background-position: 0em 16em;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 #northrop {
   background-color: #D1D8F0;
   background-image: url("../img/NG-logo-large.png");
   background-size: 60em;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 /* Footer Styling */
 footer {
-  padding-bottom: 2em; }
-  footer a.contact-circle {
-    margin: 0em 1em;
-    display: flex;
-    width: 4.5em;
-    height: 4.5em;
-    border-radius: 50%;
-    text-decoration: none;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #5C5C5C; }
+  padding-bottom: 2em;
+}
+footer a.contact-circle {
+  margin: 0em 1em;
+  display: flex;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  text-decoration: none;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #5C5C5C;
+}
 
 /*# sourceMappingURL=styles.css.map */
