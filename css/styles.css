@@ -36,6 +36,15 @@ website:    asianu.github.io
   margin-bottom: 0em;
 }
 
+.col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 62.5%/1.5 "Lato", sans-serif;
   color: #000000;
@@ -146,14 +155,18 @@ header p {
 }
 #experience .projects .project-card {
   height: 32em;
+  width: 32em;
   margin: 0em 2em;
   flex: 1 1 auto;
   box-shadow: inset 0px -4px 16px rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
 #experience .projects .project-card.wide {
   flex-grow: 2;
+}
+#experience .projects .project-card.wide:hover {
+  transform: scale(1.025, 1.025);
 }
 #experience .projects .project-card:hover {
   -webkit-transform: scale(1.05, 1.05);
@@ -194,11 +207,20 @@ header p {
 }
 
 /* Footer Styling */
-footer {
-  padding-bottom: 2em;
+#contacts {
+  width: 10em;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-footer a.contact-circle {
-  margin: 0em 1em;
+#contacts .col {
+  align-self: center;
+}
+#contacts a.contact-circle {
+  margin: 1em 2em;
   display: flex;
   width: 4.5em;
   height: 4.5em;
@@ -206,8 +228,8 @@ footer a.contact-circle {
   text-decoration: none;
   justify-content: center;
   overflow: hidden;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   background-color: #5C5C5C;
 }
 
