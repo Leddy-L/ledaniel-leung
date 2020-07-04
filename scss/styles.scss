@@ -113,6 +113,7 @@ nav {
     height: 8em;
     position: fixed;
     background-color: white;
+    z-index: 100;
 
     ul {
         width: 100%;
@@ -210,8 +211,12 @@ header {
             //cursor: pointer;
             -webkit-transform: scale(1.05, 1.05);
             transform: scale(1.05, 1.05);
+
+            //  debating on removing shadow for more flat look
+            /*
             box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1), 
                         4px 4px 16px rgba(0, 0, 0, .15);
+            */
         }
 
     }

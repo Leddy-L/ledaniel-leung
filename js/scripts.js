@@ -34,7 +34,8 @@ $(document).ready(function() {
 	//	change colors of footer elements on hover
 	$(".contact-circle").mouseenter(function() {
 		var tmp =  "'" + $(this).attr('href') + "'";
-		$(".contact-circle[href!=" + tmp + "]").css("background-color", "#ADADAD");
+		$(".contact-circle[href!=" + tmp + "]").
+			css("background-color", "#ADADAD");
 	});
 
 	$(".contact-circle").mouseleave(function() {
