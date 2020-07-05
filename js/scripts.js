@@ -42,4 +42,12 @@ $(document).ready(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
 	})
 
+	//	viewport size variables
+	const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+	$("#media-query").html(Math.max(document.documentElement.clientWidth || 0, window.innerwidth || 0));
+	$(window).resize(
+		function(){
+			$("#media-query").html(Math.max(document.documentElement.clientWidth || 0, window.innerwidth || 0));
+		});
 });
