@@ -31,6 +31,19 @@ $(document).ready(function() {
 		}
 	});
 
+	//	default shadow value
+	if($(window).scrollTop() < 60) {
+
+		$("nav .container").css("box-shadow", 
+			"0px 0px 10px rgba(0, 0, 0, " + 
+			($(window).scrollTop() * .005) + ")");
+	}
+	else {
+		$("nav .container").css("box-shadow",
+			"0px 0px 10px rgba(0, 0, 0, .3)");
+	}
+
+
 	//	change colors of footer elements on hover
 	$(".contact-circle").mouseenter(function() {
 		var tmp =  "'" + $(this).attr('href') + "'";
