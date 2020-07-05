@@ -53,6 +53,5 @@ $(document).ready(function() {
 
 	$(".contact-circle").mouseleave(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
-	})
-
+	});
 });
