@@ -304,21 +304,23 @@ header {
 /* Contact div styling */
 
 #contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @media only screen and #{$mq-small} {
         padding-bottom: 0;
         width: 10em;
         top: 0px;
         left: 0px;
         position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         .col {
             align-self: center;
         }
 
     }
+
     padding-bottom: 2em;
 
     a.contact-circle {
