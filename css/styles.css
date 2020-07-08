@@ -129,7 +129,7 @@ nav .nav-shadow {
 /* Header Styling */
 header {
   width: 100%;
-  height: 25em;
+  height: 28em;
   padding-top: 24em;
 }
 header h1 {
@@ -149,23 +149,13 @@ header p {
 #experience .projects .project-card {
   height: 32em;
   width: 100%;
+  flex: 1 1 auto;
+  -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
 @media only screen and (min-width: 64em) {
   #experience .projects {
     width: 66.667%;
-    justify-content: space-between;
-  }
-  #experience .projects .project-card {
-    height: 32em;
-    width: 100%;
-    margin: 0em 2em;
-    flex: 1 1 auto;
-    box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-  }
-  #experience .projects .project-card.wide {
-    flex-grow: 1;
   }
   #experience .projects .project-card.wide:hover {
     transform: scale(1.025, 1.025);
@@ -182,6 +172,8 @@ header p {
   #experience .projects .project-card {
     height: 32em;
     width: 1em;
+    margin: 0em 2em;
+    box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1);
   }
   #experience .projects .row {
     margin-bottom: 4em;
@@ -196,7 +188,7 @@ header p {
   }
 }
 #experience h1 {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 #experience h2 {
   color: grey;
@@ -208,7 +200,7 @@ header p {
   background-color: #FFC2E4;
   background-image: url("../img/Macbook - Launchpad.png");
   background-size: contain;
-  background-position: center 16em;
+  background-position: center 14em;
   background-repeat: no-repeat;
 }
 
@@ -216,7 +208,7 @@ header p {
   background-color: #EDDED4;
   background-image: url("../img/Macbook - Camellia Rd.png");
   background-size: contain;
-  background-position: center 16em;
+  background-position: center 14em;
   background-repeat: no-repeat;
 }
 
@@ -251,18 +243,6 @@ header p {
   align-items: center;
   padding-bottom: 2em;
 }
-@media only screen and (min-width: 48em) {
-  #contacts {
-    padding-bottom: 0;
-    width: 10em;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-  }
-  #contacts .col {
-    align-self: center;
-  }
-}
 #contacts a.contact-circle {
   margin: 1em 2em;
   display: flex;
@@ -276,6 +256,15 @@ header p {
   -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   background-color: #5C5C5C;
+}
+@media only screen and (min-width: 48em) {
+  #contacts {
+    padding-bottom: 0;
+    width: 10em;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
