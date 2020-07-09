@@ -111,7 +111,13 @@ nav li a {
   color: black;
   text-decoration: none;
 }
-nav .nav-brand {
+nav .nav-brand a {
+  margin-left: 0.5em;
+  height: 75%;
+  width: 2em;
+  background-image: url("../img/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-left: 1.5em;
   font-size: 2em;
 }
@@ -121,7 +127,7 @@ nav .nav-item:not(.nav-icon) {
 nav .nav-icon {
   width: 36px;
   height: 36px;
-  margin: 2.2em 2em;
+  margin: 2em 2em;
   position: relative;
   display: flex;
   justify-content: center;
@@ -132,7 +138,7 @@ nav .nav-icon {
 }
 nav .nav-icon-burger {
   background: black;
-  width: 32px;
+  width: 28px;
   height: 2px;
   border-radius: 5px;
   position: absolute;
@@ -144,17 +150,17 @@ nav .nav-icon-burger::after {
   content: "";
   position: absolute;
   background: black;
-  width: 32px;
+  width: 28px;
   height: 2px;
   border-radius: 5px;
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1.2);
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1.2);
 }
 nav .nav-icon-burger::before {
-  transform: translate(-16px, -8px);
+  transform: translate(-14px, -8px);
 }
 nav .nav-icon-burger::after {
-  transform: translate(-16px, 8px);
+  transform: translate(-14px, 8px);
 }
 nav .nav-icon.nav-icon-clicked .nav-icon-burger {
   transform: rotate(45deg);
@@ -165,7 +171,10 @@ nav .nav-icon.nav-icon-clicked .nav-icon-burger::before {
 nav .nav-icon.nav-icon-clicked .nav-icon-burger::after {
   transform: rotate(-90deg) translate(0px, -16px);
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 64em) {
+  nav .nav-brand a {
+    width: 0;
+  }
   nav .nav-icon {
     display: none;
   }
