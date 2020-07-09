@@ -40,6 +40,10 @@ $mq-large-ft:   "(max-width: #{$bp-large-ft})";
     background-repeat: $repeat;
 }
 
+//  Transition default
+$default-transition:    all 0.6s cubic-bezier(.2, .8, .4, 1);
+$bounce-transition:     all 0.6s cubic-bezier(.6, .2, .2, 1.4);
+
 /*  Creating default values by clearing variables and setting constants */
 * {
     margin: 0;
@@ -154,18 +158,87 @@ nav {
         font-size: 2.4em;
     }
 
-    .nav-item {
-        padding: 0em 1.5em;
-        font-size: 1.6em;
+    .nav-item:not(.nav-icon) {
+        display: none;
     }
 
-    .nav-item:nth-child(2) {
-        padding: 0em 3em 0em 1.5em;
+    //  for the hamburger menu
+    .nav-icon {
+        width: 36px;
+        height: 36px;
+        margin: 2.2em 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        -webkit-transition: $default-transition;
+        transition: $default-transition;
     }
 
-    .nav-shadow {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+    .nav-icon-burger {
+        background: black;
+        width: 32px;
+        height: 2px;
+        border-radius: 5px;
+        position: absolute;
+
+        -webkit-transition: $bounce-transition;
+        transition: $bounce-transition;
     }
+
+    .nav-icon-burger::before,
+    .nav-icon-burger::after {
+        content: '';
+        position: absolute;
+        background: black;
+        width: 32px;
+        height: 2px;
+        border-radius: 5px;
+
+        -webkit-transition: $bounce-transition;
+        transition: $bounce-transition;
+    }
+
+    .nav-icon-burger::before {
+        transform: translate(-16px, -8px);
+    }
+
+    .nav-icon-burger::after {
+        transform: translate(-16px, 8px);
+    }
+
+    //  hamburger menu animation
+    .nav-icon.nav-icon-clicked .nav-icon-burger {
+        transform: rotate(45deg);
+    }
+
+    .nav-icon.nav-icon-clicked .nav-icon-burger::before {
+        transform: rotate(0deg) translate(-16px, 0px);
+    }
+
+    .nav-icon.nav-icon-clicked .nav-icon-burger::after {
+        transform: rotate(-90deg) translate(0px, -16px);
+    }
+
+    @media only screen and #{$mq-small} {
+        .nav-icon {
+            display: none;
+        }
+
+        .nav-item:not(.nav-icon) {
+            display: flex;
+            padding: 0em 1.5em;
+            font-size: 1.6em;
+        }
+
+        .nav-item:nth-child(2) {
+            padding: 0em 3em 0em 1.5em;
+        }
+    }
+
+
 }
 
 /* Header Styling */
@@ -194,12 +267,12 @@ header {
         width: 100%;
 
         .project-card {
-            height: 32em;
+            height: 28em;
             width: 100%;
             flex: 1 1 auto;
 
-            -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-            transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
+            -webkit-transition: $default-transition;
+            transition: $default-transition;
         }
 
         @media only screen and #{$mq-medium} {
@@ -312,8 +385,8 @@ header {
         align-items: center;
         overflow: hidden;
 
-        -webkit-transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
-        transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
+        -webkit-transition: $default-transition;
+        transition: $default-transition;
 
         background-color: #5C5C5C;
     }

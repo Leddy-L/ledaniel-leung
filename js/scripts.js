@@ -31,6 +31,11 @@ $(document).ready(function() {
 		}
 	});
 
+	//	navbar icon animation
+	$(".nav-icon").click(function() {
+		$(this).toggleClass("nav-icon-clicked");
+	});
+
 	//	default shadow value
 	if($(window).scrollTop() < 60) {
 
