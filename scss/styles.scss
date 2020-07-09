@@ -42,7 +42,7 @@ $mq-large-ft:   "(max-width: #{$bp-large-ft})";
 
 //  Transition default
 $default-transition:    all 0.6s cubic-bezier(.2, .8, .4, 1);
-$bounce-transition:     all 0.6s cubic-bezier(.6, .2, .2, 1.4);
+$bounce-transition:     all 0.4s cubic-bezier(.2, .8, .4, 1.2);
 
 /*  Creating default values by clearing variables and setting constants */
 * {
@@ -155,7 +155,7 @@ nav {
 
     .nav-brand {
         padding-left: 1.5em;
-        font-size: 2.4em;
+        font-size: 2em;
     }
 
     .nav-item:not(.nav-icon) {
@@ -238,7 +238,11 @@ nav {
         }
     }
 
-
+    @media only screen and #{$mq-medium} {
+        .nav-brand {
+            font-size: 2.4em;
+        }
+    }
 }
 
 /* Header Styling */
