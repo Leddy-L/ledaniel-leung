@@ -49,14 +49,18 @@ $(document).ready(function() {
 	}
 
 
-	//	change colors of footer elements on hover
+	//	change colors of contact elements on hover
 	$(".contact-circle").mouseenter(function() {
 		var tmp =  "'" + $(this).attr('href') + "'";
 		$(".contact-circle[href!=" + tmp + "]").
 			css("background-color", "#ADADAD");
+
+		//	set a color if contact circle contents should change color on hover
+		//	$(this).children("i").css("color", "white");
 	});
 
 	$(".contact-circle").mouseleave(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
+		//	$(this).children("i").css("color", "white");
 	});
 });

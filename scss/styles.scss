@@ -42,6 +42,7 @@ $mq-large-ft:   "(max-width: #{$bp-large-ft})";
 
 //  Transition default
 $default-transition:    all 0.6s cubic-bezier(.2, .8, .4, 1);
+$short-transition:      all 0.3s cubic-bezier(.2, .8, .4, 1);
 $bounce-transition:     all 0.4s cubic-bezier(.2, .8, .4, 1.2);
 
 /*  Creating default values by clearing variables and setting constants */
@@ -157,7 +158,7 @@ nav {
         margin-left: .5em;
         height: 75%;
         width: 2em;
-        background-image: url("../img/logo.png");
+        background-image: url("../img/logo-1.png");
         background-size: contain;
         background-repeat: no-repeat;
         padding-left: 1.5em;
@@ -275,7 +276,7 @@ header {
 /* Experience Styling */
 
 #experience {
-    padding: 4em 0em;
+    padding: 4em 0em 2em;
 
     .projects{
         width: 100%;
@@ -328,6 +329,10 @@ header {
                     height: 26em;
                 }
             }
+        }
+
+        @media only screen and #{$mq-medium} {
+            padding-bottom: 2em;
         }
 
     }
@@ -405,8 +410,14 @@ header {
         background-color: #5C5C5C;
     }
 
+    i {
+        -webkit-transition: $short-transition;
+        transition: $short-transition;
+    }
+
     @media only screen and #{$mq-small} {
         padding-bottom: 0;
+        padding-left: 1em;
         width: 10em;
         top: 0px;
         left: 0px;
