@@ -41,9 +41,9 @@ $mq-large-ft:   "(max-width: #{$bp-large-ft})";
 }
 
 //  Transition default
-$default-transition:    all 0.6s cubic-bezier(.2, .8, .4, 1);
-$short-transition:      all 0.3s cubic-bezier(.2, .8, .4, 1);
-$bounce-transition:     all 0.4s cubic-bezier(.2, .8, .4, 1.2);
+$default-transition:    0.6s cubic-bezier(.2, .8, .4, 1);
+$short-transition:      0.3s cubic-bezier(.2, .8, .4, 1);
+$bounce-transition:     0.4s cubic-bezier(.2, .8, .4, 1.2);
 
 /*  Creating default values by clearing variables and setting constants */
 * {
@@ -155,8 +155,9 @@ nav {
     }
 
     .nav-brand a {
+        position: fixed;
         margin-left: .5em;
-        height: 75%;
+        height: 3em;
         width: 2em;
         background-image: url("../img/logo-1.png");
         background-size: contain;
@@ -180,8 +181,8 @@ nav {
         align-items: center;
         cursor: pointer;
 
-        -webkit-transition: $default-transition;
-        transition: $default-transition;
+        -webkit-transition: all $default-transition;
+        transition: all $default-transition;
     }
 
     .nav-icon-burger {
@@ -230,10 +231,6 @@ nav {
     }
 
     @media only screen and #{$mq-medium} {
-        .nav-brand a {
-            width: 0;
-        }
-
         .nav-icon {
             display: none;
         }
@@ -249,9 +246,40 @@ nav {
         }
     }
 
-    @media only screen and #{$mq-medium} {
-        .nav-brand {
-            font-size: 2.4em;
+    .sidebar {
+        height: 100%;
+        width: 66.67%;
+        top: 7.9em;
+        right: -66.67%;
+        position: fixed;
+        background: white;
+        display: flex;
+
+        -webkit-transition: transform $default-transition;
+        -transition: transform $default-transition;
+    }
+
+    li.sidebar-item {
+        height: 4em;
+        width: 100%;
+        margin: auto;
+        display: inline-flex;
+        justify-content: flex-end;
+
+        a {
+            margin-right: 1em;
+            font-size: 2em;
+        }
+    }
+
+    .sidebar.show-sidebar {
+        box-shadow: -1px 1em 10px rgba(0, 0, 0, .3);
+        transform: translateX(-100%);
+    }
+
+    @media only screen and #{$mq-small} {
+        .sidebar {
+            width: 33.33%;
         }
     }
 }
@@ -286,8 +314,8 @@ header {
             width: 100%;
             flex: 1 1 auto;
 
-            -webkit-transition: $default-transition;
-            transition: $default-transition;
+            -webkit-transition: all $default-transition;
+            transition: all $default-transition;
         }
 
         @media only screen and #{$mq-medium} {
@@ -404,8 +432,8 @@ header {
         align-items: center;
         overflow: hidden;
 
-        -webkit-transition: $default-transition;
-        transition: $default-transition;
+        -webkit-transition: all $default-transition;
+        transition: all $default-transition;
 
         background-color: #5C5C5C;
     }

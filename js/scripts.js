@@ -10,6 +10,7 @@ website:    asianu.github.io
 -----------------------------------------------------------------------------*/
 
 $(document).ready(function() {
+	var sidebar_clicked = false;
 
 	//	resets page scroll to top of page on page refresh
 	$(window).on('beforeunload', function() {
@@ -31,9 +32,22 @@ $(document).ready(function() {
 		}
 	});
 
-	//	navbar icon animation
+	//	navbar clicked
 	$(".nav-icon").click(function() {
 		$(this).toggleClass("nav-icon-clicked");
+		$(".sidebar").toggleClass("show-sidebar");
+
+		sidebar_clicked = !sidebar_clicked;
+
+		if(sidebar_clicked && $(window).scrollTop() < 60) {
+			$("nav .container").css("box-shadow",
+				"0px 0px 10px rgba(0, 0, 0, .3)");
+		}
+		else if(!sidebar_clicked && $(window).scrollTop() < 60) {
+			$("nav .container").css("box-shadow", 
+				"0px 0px 10px rgba(0, 0, 0, " + 
+				($(window).scrollTop() * .005) + ")");
+		}
 	});
 
 	//	default shadow value
@@ -64,3 +78,4 @@ $(document).ready(function() {
 		//	$(this).children("i").css("color", "white");
 	});
 });
+
