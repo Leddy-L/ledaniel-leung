@@ -40,6 +40,11 @@ $mq-large-ft:   "(max-width: #{$bp-large-ft})";
     background-repeat: $repeat;
 }
 
+//  Transition default
+$default-transition:    0.6s cubic-bezier(.2, .8, .4, 1);
+$short-transition:      0.3s cubic-bezier(.2, .8, .4, 1);
+$bounce-transition:     0.4s cubic-bezier(.2, .8, .4, 1.2);
+
 /*  Creating default values by clearing variables and setting constants */
 * {
     margin: 0;
@@ -149,22 +154,143 @@ nav {
         }
     }
 
-    .nav-brand {
+    .nav-brand a {
+        position: fixed;
+        margin-left: .5em;
+        height: 3em;
+        width: 2em;
+        background-image: url("../img/logo-1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
         padding-left: 1.5em;
-        font-size: 2.4em;
+        font-size: 2em;
     }
 
-    .nav-item {
-        padding: 0em 1.5em;
-        font-size: 1.6em;
+    .nav-item:not(.nav-icon) {
+        display: none;
     }
 
-    .nav-item:nth-child(2) {
-        padding: 0em 3em 0em 1.5em;
+    //  for the hamburger menu
+    .nav-icon {
+        width: 36px;
+        height: 36px;
+        margin: 2em 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        -webkit-transition: all $default-transition;
+        transition: all $default-transition;
     }
 
-    .nav-shadow {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+    .nav-icon-burger {
+        background: black;
+        width: 28px;
+        height: 2px;
+        border-radius: 5px;
+        position: absolute;
+
+        -webkit-transition: $bounce-transition;
+        transition: $bounce-transition;
+    }
+
+    .nav-icon-burger::before,
+    .nav-icon-burger::after {
+        content: '';
+        position: absolute;
+        background: black;
+        width: 28px;
+        height: 2px;
+        border-radius: 5px;
+
+        -webkit-transition: $bounce-transition;
+        transition: $bounce-transition;
+    }
+
+    .nav-icon-burger::before {
+        transform: translate(-14px, -8px);
+    }
+
+    .nav-icon-burger::after {
+        transform: translate(-14px, 8px);
+    }
+
+    //  hamburger menu animation
+    .nav-icon.nav-icon-clicked .nav-icon-burger {
+        transform: rotate(45deg);
+    }
+
+    .nav-icon.nav-icon-clicked .nav-icon-burger::before {
+        transform: rotate(0deg) translate(-16px, 0px);
+    }
+
+    .nav-icon.nav-icon-clicked .nav-icon-burger::after {
+        transform: rotate(-90deg) translate(0px, -16px);
+    }
+
+    @media only screen and #{$mq-medium} {
+        .nav-icon {
+            display: none;
+        }
+
+        .nav-item:not(.nav-icon) {
+            display: flex;
+            padding: 0em 1.5em;
+            font-size: 1.6em;
+        }
+
+        .nav-item:nth-child(2) {
+            padding: 0em 3em 0em 1.5em;
+        }
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 66.67%;
+        top: 7.9em;
+        right: -66.67%;
+        position: fixed;
+        background: white;
+        display: flex;
+
+        -webkit-transition: transform $default-transition;
+        -transition: transform $default-transition;
+    }
+
+    li.sidebar-item {
+        height: 4em;
+        width: 100%;
+        margin: auto;
+        display: inline-flex;
+
+        a {
+            height: 100%;
+            width: 100%;
+            padding-right: 1em;
+            font-size: 2em;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    .sidebar.show-sidebar {
+        box-shadow: -1px 1em 10px rgba(0, 0, 0, .3);
+        transform: translateX(-100%);
+    }
+
+    @media only screen and #{$mq-small} {
+        .sidebar {
+            width: 33.33%;
+            right: -33.33%;
+        }
+
+        .sidebar.show-sidebar {
+            box-shadow: -1px 1em 10px rgba(0, 0, 0, .3);
+            transform: translateX(-100%);
+        }
     }
 }
 
@@ -172,7 +298,7 @@ nav {
 
 header {
     width: 100%;
-    height: 25em;
+    height: 24em;
     padding-top: 24em;
 
     h1 {
@@ -188,36 +314,23 @@ header {
 /* Experience Styling */
 
 #experience {
-    padding: 4em 0em;
+    padding: 8em 0em 2em;
 
     .projects{
         width: 100%;
 
         .project-card {
-            height: 32em;
+            height: 28em;
             width: 100%;
+            flex: 1 1 auto;
+
+            -webkit-transition: all $default-transition;
+            transition: all $default-transition;
         }
 
         @media only screen and #{$mq-medium} {
 
             width: 66.667%;
-
-            justify-content: space-between;
-
-            .project-card {
-                height: 32em;
-                width: 100%;
-                margin: 0em 2em;
-                flex: 1 1 auto;
-                box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1);
-                
-                -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-                transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
-            }
-
-            .project-card.wide {
-                flex-grow: 1;
-            }
 
             .project-card.wide:hover {
                 transform: scale(1.025, 1.025);
@@ -236,7 +349,11 @@ header {
             .project-card {
                 height: 32em;
                 width: 1em;
+                margin: 0em 2em;
+
+                box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1);
             }
+
             .row {
                 margin-bottom: 4em;
             }
@@ -252,10 +369,14 @@ header {
             }
         }
 
+        @media only screen and #{$mq-medium} {
+            padding-bottom: 2em;
+        }
+
     }
 
     h1 {
-        margin-top: 3em;
+        margin-top: 2em;
     }
 
     h2 {
@@ -270,14 +391,14 @@ header {
     @include project-background(#FFC2E4, 
                                 url("../img/Macbook - Launchpad.png"),
                                 contain,
-                                center 16em);
+                                center 14em);
 }
 
 #camelliard {
     @include project-background(#EDDED4,
                                 url("../img/Macbook - Camellia Rd.png"),
                                 contain,
-                                center 16em);
+                                center 14em);
 }
 
 #northrop {
@@ -304,21 +425,9 @@ header {
 /* Contact div styling */
 
 #contacts {
-    @media only screen and #{$mq-small} {
-        padding-bottom: 0;
-        width: 10em;
-        top: 0px;
-        left: 0px;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .col {
-            align-self: center;
-        }
-
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 2em;
 
     a.contact-circle {
@@ -333,9 +442,23 @@ header {
         align-items: center;
         overflow: hidden;
 
-        -webkit-transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
-        transition: all 0.6s cubic-bezier(.2, .8, .4, 1);
+        -webkit-transition: all $default-transition;
+        transition: all $default-transition;
 
         background-color: #5C5C5C;
+    }
+
+    i {
+        -webkit-transition: $short-transition;
+        transition: $short-transition;
+    }
+
+    @media only screen and #{$mq-small} {
+        padding-bottom: 0;
+        padding-left: 1em;
+        width: 10em;
+        top: 0px;
+        left: 0px;
+        position: fixed;
     }
 }

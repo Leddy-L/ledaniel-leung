@@ -10,6 +10,25 @@ website:    asianu.github.io
 -----------------------------------------------------------------------------*/
 
 $(document).ready(function() {
+	var sidebar_clicked = false;
+
+	/*	The following section of code contains status handlers */
+
+	//	default shadow value
+	//	TODO: find a way to prevent shadow from changing when sidebar clicked
+	if($(window).scrollTop() < 60) {
+
+		$("nav .container").css("box-shadow", 
+			"0px 0px 10px rgba(0, 0, 0, " + 
+			($(window).scrollTop() * .005) + ")");
+	}
+	else {
+		$("nav .container").css("box-shadow",
+			"0px 0px 10px rgba(0, 0, 0, .3)");
+	}
+	
+
+	/*	The following section of code contains event handlers*/
 
 	//	resets page scroll to top of page on page refresh
 	$(window).on('beforeunload', function() {
@@ -31,14 +50,57 @@ $(document).ready(function() {
 		}
 	});
 
-	//	change colors of footer elements on hover
+	//	when navbar is clicked
+	$(".nav-icon").click(function() {
+		$(this).toggleClass("nav-icon-clicked");
+		$(".sidebar").toggleClass("show-sidebar");
+
+		sidebar_clicked = !sidebar_clicked;
+
+		//	event handler for when sidebar is opened
+		if(sidebar_clicked) {
+
+			//	navbar shadow should show when navbar is clicked
+			if($(window).scrollTop() < 60){
+				$("nav .container").css("box-shadow",
+					"0px 0px 10px rgba(0, 0, 0, .3)");
+			}
+
+		}
+
+		//	sidebar handler for when sidebar is closed
+		else if(!sidebar_clicked) {
+
+			if($(window).scrollTop() < 60){
+				$("nav .container").css("box-shadow", 
+					"0px 0px 10px rgba(0, 0, 0, " + 
+					($(window).scrollTop() * .005) + ")");
+			}
+		}
+	});
+
+	//	close the navbar when certain things are clicked (that's not nav-icon)
+	$(".sidebar-item a").click(function() {
+		$(".nav-icon").removeClass("nav-icon-clicked");
+		$(".sidebar").removeClass("show-sidebar");
+		sidebar_clicked = false;
+		$("nav .container").css("box-shadow", 
+			"0px 0px 0px rgba(0, 0, 0, 0)");
+	});
+
+	//	change colors of contact elements on hover
 	$(".contact-circle").mouseenter(function() {
 		var tmp =  "'" + $(this).attr('href') + "'";
 		$(".contact-circle[href!=" + tmp + "]").
 			css("background-color", "#ADADAD");
+
+		//	set a color if contact circle contents should change color on hover
+		//	$(this).children("i").css("color", "white");
 	});
 
 	$(".contact-circle").mouseleave(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
-	})
+		//	$(this).children("i").css("color", "white");
+	});
 });
+
