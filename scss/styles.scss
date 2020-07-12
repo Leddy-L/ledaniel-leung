@@ -250,10 +250,23 @@ nav {
         height: 100%;
         width: 66.67%;
         top: 7.9em;
+        right: 0;
         right: -66.67%;
         position: fixed;
         background: white;
         display: flex;
+
+        -webkit-transition: transform $default-transition;
+        -transition: transform $default-transition;
+    }
+
+    .sidebar::before {
+        content: "";
+        height: 9em;
+        width: 66.67%;
+        display: flex;
+        position: fixed;
+        transform: translateY(-8em);
 
         -webkit-transition: transform $default-transition;
         -transition: transform $default-transition;
@@ -277,19 +290,19 @@ nav {
     }
 
     .sidebar.show-sidebar {
-        box-shadow: -1px 1em 10px rgba(0, 0, 0, .3);
+        box-shadow: -4px 0 12px -6px rgba(0, 0, 0, .3);
         transform: translateX(-100%);
+
+    }
+    
+    .sidebar.show-sidebar::before {
+        box-shadow: -4px 0 12px -6px rgba(0, 0, 0, .3);
     }
 
     @media only screen and #{$mq-small} {
         .sidebar {
             width: 33.33%;
             right: -33.33%;
-        }
-
-        .sidebar.show-sidebar {
-            box-shadow: -1px 1em 10px rgba(0, 0, 0, .3);
-            transform: translateX(-100%);
         }
     }
 }
