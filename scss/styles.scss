@@ -159,7 +159,7 @@ nav {
         margin-left: .5em;
         height: 3em;
         width: 2em;
-        background-image: url("../img/logo-1.png");
+        background-image: url("../img/logo-2.png");
         background-size: contain;
         background-repeat: no-repeat;
         padding-left: 1.5em;
@@ -328,6 +328,12 @@ header {
             transition: all $default-transition;
         }
 
+        .project-card:hover {
+            //cursor: pointer;
+            -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+        }
+
         @media only screen and #{$mq-medium} {
 
             width: 66.667%;
@@ -335,12 +341,6 @@ header {
             .project-card.wide:hover {
                 -webkit-transform: scale(1.05, 1.05);
                 transform: scale(1.025, 1.025);
-            }
-
-            .project-card:hover {
-                //cursor: pointer;
-                -webkit-transform: scale(1.05, 1.05);
-                transform: scale(1.05, 1.05);
             }
         }
 

@@ -95,7 +95,7 @@ nav {
     margin-left: .5em;
     height: 3em;
     width: 2em;
-    background-image: url("../img/logo-1.png");
+    background-image: url("../img/logo-2.png");
     background-size: contain;
     background-repeat: no-repeat;
     padding-left: 1.5em;
@@ -205,15 +205,14 @@ header {
       flex: 1 1 auto;
       -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
       transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1); }
+    #experience .projects .project-card:hover {
+      -webkit-transform: scale(1.05, 1.05);
+      transform: scale(1.05, 1.05); }
     @media only screen and (min-width: 64em) {
       #experience .projects {
         width: 66.667%; }
         #experience .projects .project-card.wide:hover {
-          -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.025, 1.025); }
-        #experience .projects .project-card:hover {
-          -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05); } }
+          transform: scale(1.025, 1.025); } }
     @media screen and (min-width: 86.375em) {
       #experience .projects {
         width: 50%; }
