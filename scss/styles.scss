@@ -28,6 +28,8 @@ $mq-retina:     "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
 $mq-large-ft:   "(max-width: #{$bp-large-ft})";
 
+$nav-brand-url: "../img/logo.png";
+
 @mixin project-background($color, 
                             $image, 
                             $size, 
@@ -159,7 +161,7 @@ nav {
         margin-left: .5em;
         height: 3em;
         width: 2em;
-        background-image: url("../img/logo-2.png");
+        background-image: url($nav-brand-url);
         background-size: contain;
         background-repeat: no-repeat;
         padding-left: 1.5em;
