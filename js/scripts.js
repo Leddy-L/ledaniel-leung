@@ -15,7 +15,6 @@ $(document).ready(function() {
 	/*	The following section of code contains status handlers */
 
 	//	default shadow value
-	//	TODO: find a way to prevent shadow from changing when sidebar clicked
 	if($(window).scrollTop() < 60) {
 
 		$("nav .container").css("box-shadow", 
@@ -60,32 +59,27 @@ $(document).ready(function() {
 		//	event handler for when sidebar is opened
 		if(sidebar_clicked) {
 
-			//	navbar shadow should show when navbar is clicked
-			if($(window).scrollTop() < 60){
-				$("nav .container").css("box-shadow",
-					"0px 0px 10px rgba(0, 0, 0, .3)");
-			}
-
 		}
 
 		//	sidebar handler for when sidebar is closed
 		else if(!sidebar_clicked) {
 
-			if($(window).scrollTop() < 60){
-				$("nav .container").css("box-shadow", 
-					"0px 0px 10px rgba(0, 0, 0, " + 
-					($(window).scrollTop() * .005) + ")");
-			}
 		}
 	});
 
+	//	close sidebar if anything outside of it is clicked
+
 	//	close the navbar when certain things are clicked (that's not nav-icon)
-	$(".sidebar-item a, .nav-brand a").click(function() {
-		$(".nav-icon").removeClass("nav-icon-clicked");
-		$(".sidebar").removeClass("show-sidebar");
-		sidebar_clicked = false;
-		$("nav .container").css("box-shadow", 
-			"0px 0px 0px rgba(0, 0, 0, 0)");
+	$(".sidebar-item a, .nav-brand a, header, #experience, #contacts").click(
+		function() {
+		if(sidebar_clicked) {
+			$(".nav-icon").removeClass("nav-icon-clicked");
+			$(".sidebar").removeClass("show-sidebar");
+			sidebar_clicked = false;
+		}
+		else {
+
+		}
 	});
 
 	//	change colors of contact elements on hover
