@@ -72,7 +72,6 @@ $(document).ready(function() {
 	//	close the navbar when certain things are clicked (that's not nav-icon)
 	$(".sidebar-item a, .nav-brand a, header, #experience, #contacts").click(
 		function() {
-			/*
 		if(sidebar_clicked) {
 			$(".nav-icon").removeClass("nav-icon-clicked");
 			$(".sidebar").removeClass("show-sidebar");
@@ -81,7 +80,6 @@ $(document).ready(function() {
 		else {
 
 		}
-		*/
 	});
 
 	//	change colors of contact elements on hover
