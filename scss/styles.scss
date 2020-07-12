@@ -333,6 +333,7 @@ header {
             width: 66.667%;
 
             .project-card.wide:hover {
+                -webkit-transform: scale(1.05, 1.05);
                 transform: scale(1.025, 1.025);
             }
 
