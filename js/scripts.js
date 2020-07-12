@@ -80,7 +80,7 @@ $(document).ready(function() {
 	});
 
 	//	close the navbar when certain things are clicked (that's not nav-icon)
-	$(".sidebar-item a").click(function() {
+	$(".sidebar-item a, .nav-brand a").click(function() {
 		$(".nav-icon").removeClass("nav-icon-clicked");
 		$(".sidebar").removeClass("show-sidebar");
 		sidebar_clicked = false;

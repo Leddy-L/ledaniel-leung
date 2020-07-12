@@ -328,18 +328,18 @@ header {
             transition: all $default-transition;
         }
 
+        .project-card:hover {
+            //cursor: pointer;
+            -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+        }
+
         @media only screen and #{$mq-medium} {
 
             width: 66.667%;
 
             .project-card.wide:hover {
                 transform: scale(1.025, 1.025);
-            }
-
-            .project-card:hover {
-                //cursor: pointer;
-                -webkit-transform: scale(1.05, 1.05);
-                transform: scale(1.05, 1.05);
             }
         }
 
