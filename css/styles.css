@@ -192,6 +192,11 @@ nav {
     nav .sidebar {
       width: 33.33%;
       right: -33.33%; } }
+  @media only screen and (min-width: 64em) {
+    nav .sidebar {
+      display: none; }
+    nav .sidebar::before {
+      display: none; } }
 
 /* Header Styling */
 header {
@@ -218,11 +223,9 @@ header {
     #experience .projects .project-card:hover {
       -webkit-transform: scale(1.05, 1.05);
       transform: scale(1.05, 1.05); }
-    @media only screen and (min-width: 64em) {
+    @media only screen and (min-width: 48em) {
       #experience .projects {
-        width: 66.667%; }
-        #experience .projects .project-card.wide:hover {
-          transform: scale(1.025, 1.025); } }
+        width: 66.667%; } }
     @media screen and (min-width: 86.375em) {
       #experience .projects {
         width: 50%; }
@@ -234,7 +237,9 @@ header {
         #experience .projects .row {
           margin-bottom: 4em; }
         #experience .projects .row:last-child {
-          margin-bottom: 0em; } }
+          margin-bottom: 0em; }
+        #experience .projects .project-card.wide:hover {
+          transform: scale(1.025, 1.025); } }
   @media screen and (min-width: 86.375em) and (max-width: 106em) {
     #experience .projects .project-card {
       height: 26em; } }

@@ -307,6 +307,16 @@ nav {
             right: -33.33%;
         }
     }
+
+    @media only screen and #{$mq-medium} {
+        .sidebar {
+            display: none;
+        }
+
+        .sidebar::before {
+            display: none;
+        }
+    }
 }
 
 /* Header Styling */
@@ -350,13 +360,9 @@ header {
             transform: scale(1.05, 1.05);
         }
 
-        @media only screen and #{$mq-medium} {
+        @media only screen and #{$mq-small} {
 
             width: 66.667%;
-
-            .project-card.wide:hover {
-                transform: scale(1.025, 1.025);
-            }
         }
 
         @media screen and #{$mq-large} {
@@ -376,6 +382,10 @@ header {
 
             .row:last-child {
                 margin-bottom: 0em;
+            }
+
+            .project-card.wide:hover {
+                transform: scale(1.025, 1.025);
             }
 
             @media screen and #{$mq-large-ft} {
