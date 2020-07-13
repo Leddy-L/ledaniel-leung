@@ -1,0 +1,134 @@
+/*------------------------------------------------------------------------------
+_experience.scss
+
+version:    1.0
+date:       06/12/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'experience';
+------------------------------------------------------------------------------*/
+@use "breakpoints" as bp;
+@use "transitions" as trans;
+
+@mixin project-background($color, 
+                            $image, 
+                            $size, 
+                            $position, 
+                            $repeat : no-repeat) {
+    background-color: $color;
+    background-image: $image;
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+/* Experience Styling */
+#experience {
+    padding: 8em 0em 2em;
+    overflow: hidden;
+
+    .projects{
+        width: 100%;
+
+        .project-card {
+            height: 28em;
+            width: 100%;
+            flex: 1 1 auto;
+
+            -webkit-transition: all trans.$default-transition;
+            transition: all trans.$default-transition;
+        }
+
+        .project-card:hover {
+            //cursor: pointer;
+            -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+        }
+
+        @media only screen and #{bp.$mq-small} {
+
+            width: 66.667%;
+        }
+
+        @media screen and #{bp.$mq-large} {
+            width: 50%;
+
+            .project-card {
+                height: 32em;
+                width: 1em;
+                margin: 0em 2em;
+
+                box-shadow: inset 0px -4px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .row {
+                margin-bottom: 4em;
+            }
+
+            .row:last-child {
+                margin-bottom: 0em;
+            }
+
+            .project-card.wide:hover {
+                transform: scale(1.025, 1.025);
+            }
+
+            @media screen and #{bp.$mq-large-ft} {
+                .project-card {
+                    height: 26em;
+                }
+            }
+        }
+
+        @media only screen and #{bp.$mq-medium} {
+            padding-bottom: 2em;
+        }
+
+    }
+
+    h1 {
+        margin-top: 2em;
+    }
+
+    h2 {
+        color: grey;
+        font-weight: normal;
+        font-size: 1.6em;
+    }
+
+}
+
+#launchpad {
+    @include project-background(#FFC2E4, 
+                                url("../img/Macbook - Launchpad.png"),
+                                contain,
+                                center 14em);
+}
+
+#camelliard {
+    @include project-background(#EDDED4,
+                                url("../img/Macbook - Camellia Rd.png"),
+                                contain,
+                                center 14em);
+}
+
+#northrop {
+    @include project-background(#D1D8F0,
+                                url("../img/NG-logo-small.png"),
+                                24em,
+                                center center);
+
+    @media only screen and #{bp.$mq-medium} {
+        background-image: url("../img/NG-logo-large.png");
+        background-size: 64em;
+    }
+
+    @media only screen and #{bp.$mq-large} {
+        background-size: 64em;
+
+        @media screen and #{bp.$mq-large-ft} {
+            background-size: 60em;
+        }   
+    }
+}

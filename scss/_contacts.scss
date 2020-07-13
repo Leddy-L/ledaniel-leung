@@ -1,0 +1,53 @@
+/*------------------------------------------------------------------------------
+_experience.scss
+
+version:    1.0
+date:       06/12/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'experience';
+------------------------------------------------------------------------------*/
+@use "breakpoints" as bp;
+@use "transitions" as trans;
+
+/* Contact div styling */
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+
+    a.contact-circle {
+        margin: 1em 2em;
+        display: flex;
+        width: 4.5em;
+        height: 4.5em;
+        border-radius: 50%;
+
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        -webkit-transition: all trans.$default-transition;
+        transition: all trans.$default-transition;
+
+        background-color: #5C5C5C;
+    }
+
+    i {
+        -webkit-transition: trans.$short-transition;
+        transition: trans.$short-transition;
+    }
+
+    @media only screen and #{bp.$mq-small} {
+        padding-bottom: 0;
+        padding-left: 1em;
+        width: 10em;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+    }
+}
