@@ -1,16 +1,15 @@
 /*------------------------------------------------------------------------------
-index.html Screen Stylesheet
+_transitions.scss
 
 version:    1.0
 date:       06/12/2020
 author:     LeDaniel Leung
 email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
-desc.:      This file compiles all the styles for the project;
+@use 'transitions';
 ------------------------------------------------------------------------------*/
-//  Imports
-@use "globals" as *;
-@use "navbar";
-@use "landing" as land;
-@use "experience" as exp;
-@use "contacts";
+
+//  Transition default
+$default-transition:    0.6s cubic-bezier(.2, .8, .4, 1);
+$short-transition:      0.3s cubic-bezier(.2, .8, .4, 1);
+$bounce-transition:     0.4s cubic-bezier(.2, .8, .4, 1.2);
