@@ -259,7 +259,7 @@ nav .sidebar.show-sidebar {
 }
 nav .sidebar.show-sidebar::before {
   -webkit-box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
-  box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px 0 10px -8px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width: 48em) {
   nav .sidebar {
