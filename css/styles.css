@@ -253,11 +253,13 @@ nav li.sidebar-item a {
   align-items: center;
 }
 nav .sidebar.show-sidebar {
-  box-shadow: -8px 0 10px -6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px 0 10px -8px rgba(0, 0, 0, 0.3);
   transform: translateX(-100%);
 }
 nav .sidebar.show-sidebar::before {
-  box-shadow: -8px 0 10px -6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width: 48em) {
   nav .sidebar {

@@ -72,15 +72,9 @@ $(document).ready(function() {
 	//	close the navbar when certain things are clicked (that's not nav-icon)
 	$(".sidebar-item a, .nav-brand a, header, #experience, #contacts").click(
 		function() {
-		if(sidebar_clicked) {
-			$(".nav-icon").removeClass("nav-icon-clicked");
-			$(".sidebar").removeClass("show-sidebar");
-			sidebar_clicked = false;
+			sidebar_clicked = close_sidebar(sidebar_clicked);
 		}
-		else {
-
-		}
-	});
+	);
 
 	//	change colors of contact elements on hover
 	$(".contact-circle").mouseenter(function() {
@@ -97,4 +91,15 @@ $(document).ready(function() {
 		//	$(this).children("i").css("color", "white");
 	});
 });
+
+function close_sidebar(sidebar_clicked) {
+	if(sidebar_clicked) {
+		$(".nav-icon").removeClass("nav-icon-clicked");
+		$(".sidebar").removeClass("show-sidebar");
+	}
+	else {
+
+	}
+	return false;
+}
 
