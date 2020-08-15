@@ -300,6 +300,16 @@ header p {
 }
 
 /*------------------------------------------------------------------------------
+_colors.scss
+
+version:    1.0
+date:       06/12/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'colors';
+------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
 _experience.scss
 
 version:    1.0
@@ -308,11 +318,19 @@ author:     LeDaniel Leung
 email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
 @use 'experience';
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 /* Experience Styling */
 #experience {
   padding: 8em 0em 2em;
   overflow: hidden;
+}
+#experience h1 {
+  margin-top: 2em;
+}
+#experience h2 {
+  color: grey;
+  font-weight: normal;
+  font-size: 1.6em;
 }
 #experience .projects {
   width: 100%;
@@ -363,14 +381,6 @@ website:    asianu.github.io
     padding-bottom: 2em;
   }
 }
-#experience h1 {
-  margin-top: 2em;
-}
-#experience h2 {
-  color: grey;
-  font-weight: normal;
-  font-size: 1.6em;
-}
 
 #launchpad {
   background-color: #FFC2E4;
@@ -410,6 +420,80 @@ website:    asianu.github.io
   #northrop {
     background-size: 60em;
   }
+}
+
+/*-----------------------------------------------------------------------------
+_overlays.scss
+
+version:    1.0
+date:       08/15/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'overlays';
+-----------------------------------------------------------------------------*/
+#overlays .project-overlay {
+  position: fixed;
+  top: 0;
+  padding: 4em 4em;
+  height: 100%;
+  width: inherit;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  background-color: #FFC2E4;
+  z-index: 1;
+  text-align: left;
+}
+#overlays .project-overlay h1::after, #overlays .project-overlay h2::after, #overlays .project-overlay p::after {
+  height: 0.4em;
+  display: block;
+  content: "";
+}
+#overlays .project-overlay h1 {
+  font-size: 3em;
+}
+#overlays .project-overlay h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+#overlays .project-overlay p {
+  font-size: 1.4em;
+}
+@media only screen and (min-width: 48em) {
+  #overlays .project-overlay {
+    width: 66.667%;
+  }
+}
+@media screen and (min-width: 86.375em) {
+  #overlays .project-overlay {
+    width: 50%;
+  }
+}
+#overlays .project-overlay .exp-icon-close {
+  top: 9.25em;
+  right: 1.75em;
+  height: 4em;
+  width: 4em;
+  box-sizing: border-box;
+  position: absolute;
+}
+#overlays .project-overlay .exp-icon-close::before,
+#overlays .project-overlay .exp-icon-close::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 28px;
+  height: 2px;
+  border-radius: 5px;
+}
+#overlays .project-overlay .exp-icon-close::before {
+  transform: translate(0.6em, 2em) rotate(45deg);
+}
+#overlays .project-overlay .exp-icon-close::after {
+  transform: translate(0.6em, 2em) rotate(-45deg);
+}
+#overlays .project-overlay .exp-icon-close:hover {
+  cursor: pointer;
 }
 
 /*------------------------------------------------------------------------------

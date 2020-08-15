@@ -1,0 +1,94 @@
+/*-----------------------------------------------------------------------------
+_overlays.scss
+
+version:    1.0
+date:       08/15/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'overlays';
+-----------------------------------------------------------------------------*/
+@use "colors";
+@use "breakpoints" as bp;
+
+#overlays {
+
+    .project-overlay {
+        // display: none;   uncomment when done
+        position: fixed;
+
+        top: 0;
+        padding: 4em 4em;
+        height: 100%;
+        width: inherit;
+        box-sizing: border-box;
+        overflow-y: scroll;
+
+        background-color: colors.$launchpad-color;
+
+        z-index: 1;
+
+        text-align: left;
+
+        h1::after, h2::after, p::after {
+            height: .4em;
+            display: block;
+            content: '';
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.4em;
+        }
+
+        @media only screen and #{bp.$mq-small} {
+
+            width: 66.667%;
+        }
+
+        @media screen and #{bp.$mq-large} {
+            width: 50%;
+        }
+
+        .exp-icon-close {
+            top: 9.25em;
+            right: 1.75em;
+            height: 4em;
+            width: 4em;
+            box-sizing: border-box;
+            position: absolute;
+        }
+
+        .exp-icon-close::before,
+        .exp-icon-close::after {
+            content: '';
+            position: absolute;
+            background: black;
+            width: 28px;
+            height: 2px;
+            border-radius: 5px;
+
+        }
+
+        .exp-icon-close::before {
+            transform: translate(.6em, 2em) rotate(45deg);
+        }
+
+        .exp-icon-close::after {
+            transform: translate(.6em, 2em) rotate(-45deg);
+        }
+
+        .exp-icon-close:hover {
+            cursor: pointer;
+        }
+
+    }
+}

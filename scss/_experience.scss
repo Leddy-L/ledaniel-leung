@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 _experience.scss
 
 version:    1.0
@@ -7,9 +7,10 @@ author:     LeDaniel Leung
 email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
 @use 'experience';
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 @use "breakpoints" as bp;
 @use "transitions" as trans;
+@use "colors";
 
 @mixin project-background($color, 
                             $image, 
@@ -27,6 +28,17 @@ website:    asianu.github.io
 #experience {
     padding: 8em 0em 2em;
     overflow: hidden;
+
+
+    h1 {
+        margin-top: 2em;
+    }
+
+    h2 {
+        color: grey;
+        font-weight: normal;
+        font-size: 1.6em;
+    }
 
     .projects{
         width: 100%;
@@ -84,37 +96,25 @@ website:    asianu.github.io
         @media only screen and #{bp.$mq-medium} {
             padding-bottom: 2em;
         }
-
     }
-
-    h1 {
-        margin-top: 2em;
-    }
-
-    h2 {
-        color: grey;
-        font-weight: normal;
-        font-size: 1.6em;
-    }
-
 }
 
 #launchpad {
-    @include project-background(#FFC2E4, 
+    @include project-background(colors.$launchpad-color, 
                                 url("../img/Macbook - Launchpad.png"),
                                 contain,
                                 center 14em);
 }
 
 #camelliard {
-    @include project-background(#EDDED4,
+    @include project-background(colors.$camelliard-color,
                                 url("../img/Macbook - Camellia Rd.png"),
                                 contain,
                                 center 14em);
 }
 
 #northrop {
-    @include project-background(#D1D8F0,
+    @include project-background(colors.$northrop-color,
                                 url("../img/NG-logo-small.png"),
                                 24em,
                                 center center);

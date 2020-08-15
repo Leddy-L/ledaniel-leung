@@ -1,17 +1,14 @@
 /*------------------------------------------------------------------------------
-index.html Screen Stylesheet
+_colors.scss
 
 version:    1.0
 date:       06/12/2020
 author:     LeDaniel Leung
 email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
-desc.:      This file compiles all the styles for the project;
+@use 'colors';
 ------------------------------------------------------------------------------*/
-//  Imports
-@use "globals" as *;
-@use "navbar";
-@use "landing" as land;
-@use "experience" as exp;
-@use "overlays" as overlay;
-@use "contacts";
+
+$launchpad-color:   #FFC2E4;
+$camelliard-color:  #EDDED4;
+$northrop-color:    #D1D8F0;

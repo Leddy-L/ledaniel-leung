@@ -90,6 +90,11 @@ $(document).ready(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
 		//	$(this).children("i").css("color", "white");
 	});
+
+	// when the overlay's close icon is clicked
+	$(".exp-icon-close").click(function () {
+		$(this).parent().css("display", "none");
+	});
 });
 
 function close_sidebar(sidebar_clicked) {
