@@ -434,18 +434,16 @@ website:    asianu.github.io
 @use 'overlays';
 -----------------------------------------------------------------------------*/
 #overlays .project-overlay {
-  visibility: hidden;
-  opacity: 0;
   position: fixed;
-  top: 0;
-  padding: 4em 4em;
+  top: 100%;
+  padding: 10em 4em 4em;
   height: 100%;
   width: inherit;
   box-sizing: border-box;
   overflow-y: scroll;
   z-index: 1;
   text-align: left;
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
+  transition: all 0.9s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
 #overlays .project-overlay h1::after, #overlays .project-overlay h2::after, #overlays .project-overlay p::after {
   height: 0.4em;

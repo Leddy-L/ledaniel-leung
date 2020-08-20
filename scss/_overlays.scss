@@ -15,12 +15,10 @@ website:    asianu.github.io
 #overlays {
 
     .project-overlay {
-        visibility: hidden;
-        opacity: 0;
         position: fixed;
 
-        top: 0;
-        padding: 4em 4em;
+        top: 100%;
+        padding: 10em 4em 4em;
         height: 100%;
         width: inherit;
         box-sizing: border-box;
@@ -90,7 +88,7 @@ website:    asianu.github.io
             cursor: pointer;
         }
 
-        transition: all trans.$default-transition;
+        transition: all trans.$long-transition;
     }
 
     #launchpad-overlay {
