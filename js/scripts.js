@@ -93,7 +93,15 @@ $(document).ready(function() {
 
 	// when the overlay's close icon is clicked
 	$(".exp-icon-close").click(function () {
-		$(this).parent().css("display", "none");
+		$(this).parent().css({"visibility": "hidden", "opacity": "0"});
+		$("body").css("overflow", "scroll");
+	});
+
+	//	open the overlay corresponding to the project
+	$(".project-card").click(function () {
+		var id = $(this).attr("id");
+		$("#" + id + "-overlay").css({"visibility": "visible", "opacity": "1"});
+		$("body").css("overflow", "hidden");
 	});
 });
 
