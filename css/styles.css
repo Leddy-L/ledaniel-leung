@@ -354,10 +354,10 @@ header .typewriter {
   white-space: nowrap;
 }
 header .typewriter-cursor {
-  border-right: 2px solid rgba(0, 0, 0, 0);
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
 }
 header .typewriter-animation {
-  animation: typewriter 4s steps(35) 1s 1 normal both, cursorBlink 500ms steps(35) 1s 10 normal;
+  animation: typewriter 4s steps(35) 1s 1 normal both, cursorBlink 1s steps(35) 0s 10 normal forwards;
 }
 @keyframes typewriter {
   from {
@@ -369,10 +369,10 @@ header .typewriter-animation {
 }
 @keyframes cursorBlink {
   from {
-    border-right-color: transparent;
+    border-right-color: rgba(0, 0, 0, 0.75);
   }
   to {
-    border-right-color: rgba(0, 0, 0, 0.75);
+    border-right-color: transparent;
   }
 }
 

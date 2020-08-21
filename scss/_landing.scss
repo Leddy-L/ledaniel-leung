@@ -98,12 +98,12 @@ header {
     }
     
     .typewriter-cursor {
-    	border-right: 2px solid rgba(0, 0, 0, 0);
+    	border-right: 2px solid rgba(0, 0, 0, 0.75);
     }
 
     .typewriter-animation {
     	animation: 	typewriter 4s steps(35) 1s 1 normal both,
-    				cursorBlink 500ms steps(35) 1s 10 normal;
+    				cursorBlink 1s steps(35) 0s 10 normal forwards;
     }
 
     @keyframes typewriter {
@@ -112,7 +112,7 @@ header {
     }
 
     @keyframes cursorBlink {
-    	from{border-right-color: transparent;}
-    	to{border-right-color: rgba(0, 0, 0, .75);}
+    	from{border-right-color: rgba(0, 0, 0, .75);}
+    	to{border-right-color: transparent;}
     }
 }
