@@ -89,6 +89,30 @@ header {
 	    	background-position: 66.67% 8em;
     	}
     }
-    
 
+    .typewriter {
+    	width: 17.5em;
+    	margin: 0 auto;
+    	overflow: hidden;
+    	white-space: nowrap;
+    }
+    
+    .typewriter-cursor {
+    	border-right: 2px solid rgba(0, 0, 0, 0);
+    }
+
+    .typewriter-animation {
+    	animation: 	typewriter 4s steps(35) 1s 1 normal both,
+    				cursorBlink 500ms steps(35) 1s 10 normal;
+    }
+
+    @keyframes typewriter {
+    	from{width: 0;}
+    	to{width: 17.5em;}
+    }
+
+    @keyframes cursorBlink {
+    	from{border-right-color: transparent;}
+    	to{border-right-color: rgba(0, 0, 0, .75);}
+    }
 }
