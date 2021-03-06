@@ -43,6 +43,11 @@ website:    asianu.github.io
     .projects{
         width: 100%;
 
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
         .project-card {
             height: 28em;
             width: 100%;
@@ -131,3 +136,16 @@ website:    asianu.github.io
         }   
     }
 }
+
+#lkc-puzzle-room {
+    h1 {
+        color: lightgrey;
+    }
+
+    @include project-background(colors.$lkc-puzzle-room-color,
+                                url("../img/lighthouse.png"),
+                                15%,
+                                50% 75%);
+}
+
+
