@@ -13,4 +13,5 @@ desc.:      This file compiles all the styles for the project;
 @use "navbar";
 @use "landing" as land;
 @use "experience" as exp;
+@use "overlays" as overlay;
 @use "contacts";

@@ -72,15 +72,9 @@ $(document).ready(function() {
 	//	close the navbar when certain things are clicked (that's not nav-icon)
 	$(".sidebar-item a, .nav-brand a, header, #experience, #contacts").click(
 		function() {
-		if(sidebar_clicked) {
-			$(".nav-icon").removeClass("nav-icon-clicked");
-			$(".sidebar").removeClass("show-sidebar");
-			sidebar_clicked = false;
+			sidebar_clicked = close_sidebar(sidebar_clicked);
 		}
-		else {
-
-		}
-	});
+	);
 
 	//	change colors of contact elements on hover
 	$(".contact-circle").mouseenter(function() {
@@ -96,5 +90,29 @@ $(document).ready(function() {
 		$(".contact-circle").css("background-color", "#5C5C5C");
 		//	$(this).children("i").css("color", "white");
 	});
+
+	// when the overlay's close icon is clicked
+	$(".exp-icon-close").click(function () {
+		$(this).parent().css("top", "100%");
+		$("body").css("overflow", "scroll");
+	});
+
+	//	open the overlay corresponding to the project
+	$(".project-card").click(function () {
+		var id = $(this).attr("id");
+		$("#" + id + "-overlay").css("top", "0");
+		$("body").css("overflow", "hidden");
+	});
 });
+
+function close_sidebar(sidebar_clicked) {
+	if(sidebar_clicked) {
+		$(".nav-icon").removeClass("nav-icon-clicked");
+		$(".sidebar").removeClass("show-sidebar");
+	}
+	else {
+
+	}
+	return false;
+}
 

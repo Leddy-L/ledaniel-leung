@@ -51,7 +51,7 @@ nav {
         font-size: 2em;
     }
 
-    .nav-item:not(.nav-icon) {
+    .nav-item {
         display: none;
     }
 
@@ -60,11 +60,14 @@ nav {
         width: 36px;
         height: 36px;
         margin: 2em 2em;
-        position: relative;
+        right: 0;
+        position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        box-sizing: border-box;
+        z-index: 1000;
 
         -webkit-transition: all trans.$default-transition;
         transition: all trans.$default-transition;
@@ -120,7 +123,7 @@ nav {
             display: none;
         }
 
-        .nav-item:not(.nav-icon) {
+        .nav-item {
             display: flex;
             padding: 0em 1.5em;
             font-size: 1.6em;
@@ -132,26 +135,16 @@ nav {
     }
 
     .sidebar {
+        padding: 6em 0em 0em;
         height: 100%;
         width: 66.67%;
-        top: 7.9em;
-        right: 0;
+        top: 0;
         right: -66.67%;
         position: fixed;
         background: white;
         display: flex;
 
-        -webkit-transition: transform trans.$default-transition;
-        -transition: transform trans.$default-transition;
-    }
-
-    .sidebar::before {
-        content: "";
-        height: 9em;
-        width: 66.67%;
-        display: flex;
-        position: fixed;
-        transform: translateY(-8em);
+        z-index: 10;
 
         -webkit-transition: transform trans.$default-transition;
         -transition: transform trans.$default-transition;
@@ -175,13 +168,15 @@ nav {
     }
 
     .sidebar.show-sidebar {
-        box-shadow: -8px 0 10px -6px rgba(0, 0, 0, .3);
+        -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, .3);
+        box-shadow: 0px 0 10px rgba(0, 0, 0, .3);
         transform: translateX(-100%);
 
     }
     
     .sidebar.show-sidebar::before {
-        box-shadow: -8px 0 10px -6px rgba(0, 0, 0, .3);
+        -webkit-box-shadow: -8px 0 10px -12px rgba(0, 0, 0, .3);
+        box-shadow: -8px 0 10px -8px rgba(0, 0, 0, .3);
     }
 
     @media only screen and #{bp.$mq-small} {

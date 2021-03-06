@@ -10,6 +10,7 @@ website:    asianu.github.io
 ------------------------------------------------------------------------------*/
 @use "breakpoints" as bp;
 @use "transitions" as trans;
+@use "colors" as colors;
 
 /* Contact div styling */
 
@@ -34,7 +35,7 @@ website:    asianu.github.io
         -webkit-transition: all trans.$default-transition;
         transition: all trans.$default-transition;
 
-        background-color: #5C5C5C;
+        background-color: colors.$grey;
     }
 
     i {

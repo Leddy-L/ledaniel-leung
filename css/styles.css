@@ -13,6 +13,12 @@ website:    asianu.github.io
   margin: 0;
   padding: 0;
   border: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .clear {
@@ -152,18 +158,21 @@ nav .nav-brand a {
   padding-left: 1.5em;
   font-size: 2em;
 }
-nav .nav-item:not(.nav-icon) {
+nav .nav-item {
   display: none;
 }
 nav .nav-icon {
   width: 36px;
   height: 36px;
   margin: 2em 2em;
-  position: relative;
+  right: 0;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-sizing: border-box;
+  z-index: 1000;
   -webkit-transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
@@ -206,7 +215,7 @@ nav .nav-icon.nav-icon-clicked .nav-icon-burger::after {
   nav .nav-icon {
     display: none;
   }
-  nav .nav-item:not(.nav-icon) {
+  nav .nav-item {
     display: flex;
     padding: 0em 1.5em;
     font-size: 1.6em;
@@ -216,24 +225,15 @@ nav .nav-icon.nav-icon-clicked .nav-icon-burger::after {
   }
 }
 nav .sidebar {
+  padding: 6em 0em 0em;
   height: 100%;
   width: 66.67%;
-  top: 7.9em;
-  right: 0;
+  top: 0;
   right: -66.67%;
   position: fixed;
   background: white;
   display: flex;
-  -webkit-transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-  -transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
-}
-nav .sidebar::before {
-  content: "";
-  height: 9em;
-  width: 66.67%;
-  display: flex;
-  position: fixed;
-  transform: translateY(-8em);
+  z-index: 10;
   -webkit-transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
   -transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
@@ -253,11 +253,13 @@ nav li.sidebar-item a {
   align-items: center;
 }
 nav .sidebar.show-sidebar {
-  box-shadow: -8px 0 10px -6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
   transform: translateX(-100%);
 }
 nav .sidebar.show-sidebar::before {
-  box-shadow: -8px 0 10px -6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -8px 0 10px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px 0 10px -8px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width: 48em) {
   nav .sidebar {
@@ -288,16 +290,109 @@ website:    asianu.github.io
 header {
   width: 100%;
   height: 24em;
-  padding-top: 24em;
+  padding-top: 8em;
 }
 header h1 {
-  font-size: 4.8em;
+  font-size: 3.6em;
 }
 header p {
-  font-size: 1.6em;
+  font-size: 1.2em;
+}
+header div {
+  box-sizing: border-box;
+}
+header .landing-card {
+  height: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+header .row {
+  height: inherit;
+  width: 66.67%;
+  justify-content: center;
+}
+header #landing-parallax {
+  display: none;
+}
+@media screen and (min-width: 48em) {
+  header h1 {
+    font-size: 4.8em;
+  }
+  header p {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 64em) {
+  header {
+    height: 48em;
+  }
+  header .landing-card {
+    margin: 0em 2em;
+    height: inherit;
+    width: 40%;
+  }
+  header #landing-parallax {
+    display: block;
+    background-image: url("../img/ryoji-iwata-n31JPLu8_Pw-unsplash.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 72.5% 8em;
+  }
+}
+@media screen and (min-width: 86.375em) {
+  header .landing-card {
+    margin: 0em;
+    width: 37%;
+  }
+  header #landing-parallax {
+    background-size: 25%;
+    background-position: 66.67% 8em;
+  }
+}
+header .typewriter {
+  width: 17.5em;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header .typewriter-cursor {
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+}
+header .typewriter-animation {
+  animation: typewriter 4s steps(35) 1s 1 normal both, cursorBlink 1s steps(35) 0s 10 normal forwards;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.5em;
+  }
+}
+@keyframes cursorBlink {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /*------------------------------------------------------------------------------
+_colors.scss
+
+version:    1.0
+date:       06/12/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'colors';
+------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
 _experience.scss
 
 version:    1.0
@@ -306,11 +401,19 @@ author:     LeDaniel Leung
 email:      ledaniel.leung@gmail.com
 website:    asianu.github.io
 @use 'experience';
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 /* Experience Styling */
 #experience {
   padding: 8em 0em 2em;
   overflow: hidden;
+}
+#experience h1 {
+  margin-top: 2em;
+}
+#experience h2 {
+  color: grey;
+  font-weight: normal;
+  font-size: 1.6em;
 }
 #experience .projects {
   width: 100%;
@@ -323,6 +426,7 @@ website:    asianu.github.io
   transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
 #experience .projects .project-card:hover {
+  cursor: pointer;
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
 }
@@ -360,14 +464,6 @@ website:    asianu.github.io
   #experience .projects {
     padding-bottom: 2em;
   }
-}
-#experience h1 {
-  margin-top: 2em;
-}
-#experience h2 {
-  color: grey;
-  font-weight: normal;
-  font-size: 1.6em;
 }
 
 #launchpad {
@@ -408,6 +504,89 @@ website:    asianu.github.io
   #northrop {
     background-size: 60em;
   }
+}
+
+/*-----------------------------------------------------------------------------
+_overlays.scss
+
+version:    1.0
+date:       08/15/2020
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io
+@use 'overlays';
+-----------------------------------------------------------------------------*/
+#overlays .project-overlay {
+  position: fixed;
+  top: 100%;
+  padding: 10em 4em 4em;
+  height: 100%;
+  width: inherit;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  z-index: 1;
+  text-align: left;
+  transition: all 0.9s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+#overlays .project-overlay h1::after, #overlays .project-overlay h2::after, #overlays .project-overlay p::after {
+  height: 0.4em;
+  display: block;
+  content: "";
+}
+#overlays .project-overlay h1 {
+  font-size: 3em;
+}
+#overlays .project-overlay h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+#overlays .project-overlay p {
+  font-size: 1.4em;
+}
+@media only screen and (min-width: 48em) {
+  #overlays .project-overlay {
+    width: 66.667%;
+  }
+}
+@media screen and (min-width: 86.375em) {
+  #overlays .project-overlay {
+    width: 50%;
+  }
+}
+#overlays .project-overlay .exp-icon-close {
+  top: 9.25em;
+  right: 1.75em;
+  height: 4em;
+  width: 4em;
+  box-sizing: border-box;
+  position: absolute;
+}
+#overlays .project-overlay .exp-icon-close::before,
+#overlays .project-overlay .exp-icon-close::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 28px;
+  height: 2px;
+  border-radius: 5px;
+}
+#overlays .project-overlay .exp-icon-close::before {
+  transform: translate(0.6em, 2em) rotate(45deg);
+}
+#overlays .project-overlay .exp-icon-close::after {
+  transform: translate(0.6em, 2em) rotate(-45deg);
+}
+#overlays .project-overlay .exp-icon-close:hover {
+  cursor: pointer;
+}
+#overlays #launchpad-overlay {
+  background-color: #FFC2E4;
+}
+#overlays #camelliard-overlay {
+  background-color: #EDDED4;
+}
+#overlays #northrop-overlay {
+  background-color: #D1D8F0;
 }
 
 /*------------------------------------------------------------------------------
