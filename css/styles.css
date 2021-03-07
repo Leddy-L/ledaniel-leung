@@ -650,6 +650,24 @@ website:    asianu.github.io
   }
 }
 
+/*-----------------------------------------------------------------------------
+_unity.scss
+
+version:    1.0
+date:       03/06/2021
+author:     LeDaniel Leung
+email:      ledaniel.leung@gmail.com
+website:    asianu.github.io/lkc-puzzle-game/index.html
+@use 'unity';
+-----------------------------------------------------------------------------*/
+#unityContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: calc(-960 / 2px);
+  margin-top: calc(-600 / 2px);
+}
+
 /*------------------------------------------------------------------------------
 index.html Screen Stylesheet
 
