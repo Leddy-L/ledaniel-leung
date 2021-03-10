@@ -660,6 +660,10 @@ email:      ledaniel.leung@gmail.com
 website:    asianu.github.io/lkc-puzzle-game/index.html
 @use 'unity';
 -----------------------------------------------------------------------------*/
+#unityContainer {
+  padding: 40px;
+}
+
 /*------------------------------------------------------------------------------
 index.html Screen Stylesheet
 
