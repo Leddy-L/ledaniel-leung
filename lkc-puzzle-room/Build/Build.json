@@ -1,7 +1,7 @@
 {
 "companyName": "LL7",
-"productName": "LKC Game Activity",
-"productVersion": "0.1",
+"productName": "Puzzle Room",
+"productVersion": "1.0",
 "dataUrl": "Build.data.unityweb",
 "wasmCodeUrl": "Build.wasm.code.unityweb",
 "wasmFrameworkUrl": "Build.wasm.framework.unityweb",

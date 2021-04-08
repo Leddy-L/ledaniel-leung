@@ -3,17 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | LKC Game Activity</title>
+    <title>Unity WebGL Player | Puzzle Room</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      UnityLoader.instantiate("unityContainer", "Build/Build.json");
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", {onProgress: UnityProgress});
     </script>
     <link href="../css/styles.css" rel="stylesheet">
   </head>
   <h1>LKC Puzzle Room Activity</h1>
   <body>
-    <div class="container centered">
-      <div id="unityContainer" style="width: 960px; height: 600px;"></div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Puzzle Room</div>
+      </div>
     </div>
     <div class="container centered">
       <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
