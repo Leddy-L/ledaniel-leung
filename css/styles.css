@@ -521,6 +521,17 @@ website:    asianu.github.io
   color: lightgrey;
 }
 
+#random-word-generator {
+  background-color: #1C3A48;
+  background-image: url("../img/lighthouse.png");
+  background-size: 15%;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+}
+#random-word-generator h1 {
+  color: lightgrey;
+}
+
 /*-----------------------------------------------------------------------------
 _overlays.scss
 
@@ -660,10 +671,6 @@ email:      ledaniel.leung@gmail.com
 website:    asianu.github.io/lkc-puzzle-game/index.html
 @use 'unity';
 -----------------------------------------------------------------------------*/
-#unityContainer {
-  padding: 40px;
-}
-
 /*------------------------------------------------------------------------------
 index.html Screen Stylesheet
 
