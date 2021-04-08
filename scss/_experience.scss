@@ -148,4 +148,15 @@ website:    asianu.github.io
                                 50% 75%);
 }
 
+#random-word-generator {
+    h1 {
+        color: lightgrey;
+    }
+
+    @include project-background(colors.$lkc-puzzle-room-color,
+                                url("../img/lighthouse.png"),
+                                15%,
+                                50% 75%);
+}
+
 
