@@ -1,7 +1,7 @@
 {
-"companyName": "DefaultCompany",
-"productName": "Drawing Prompt Generator for LKC",
-"productVersion": "0.1",
+"companyName": "LL7",
+"productName": "Random Word Generator",
+"productVersion": "1.0",
 "dataUrl": "Build.data.unityweb",
 "wasmCodeUrl": "Build.wasm.code.unityweb",
 "wasmFrameworkUrl": "Build.wasm.framework.unityweb",
