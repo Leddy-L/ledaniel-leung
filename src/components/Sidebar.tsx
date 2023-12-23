@@ -1,31 +1,42 @@
-import React from "react";
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+interface Contact {
+  id: number;
+  link: string;
+  icon: FontAwesomeIconProps;
+}
 
 const Sidebar = () => {
+  const contacts = [
+    {
+      id: 0,
+      link: "https://www.linkedin.com/in/ledaniel-leung",
+      icon: faLinkedinIn,
+    },
+    {
+      id: 1,
+      link: "https://github.com/Asianu",
+      icon: faGithub,
+    },
+    {
+      id: 2,
+      link: "mailto: ledaniel.leung@gmail.com",
+      icon: faEnvelope,
+    },
+  ];
+
   return (
-    <div className="centered container" id="contacts">
-      <div className="row">
-        <a
-          className="contact-circle"
-          href="https://www.linkedin.com/in/ledaniel-leung"
-          target="_blank"
-        >
-          <i className="fab fa-linkedin-in fa-inverse fa-2x"></i>
+    <div id="contacts">
+      {contacts.map((contact) => (
+        <a href={contact.link} target="_blank">
+          <FontAwesomeIcon icon={contact.icon} />
         </a>
-        <a
-          className="contact-circle"
-          href="https://github.com/Asianu"
-          target="_blank"
-        >
-          <i className="fab fa-github-alt fa-inverse fa-2x"></i>
-        </a>
-        <a
-          className="contact-circle"
-          href="mailto: ledaniel.leung@gmail.com"
-          target="_blank"
-        >
-          <i className="fas fa-envelope fa-inverse fa-2x"></i>
-        </a>
-      </div>
+      ))}
     </div>
   );
 };

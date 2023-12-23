@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/About.scss";
 import parallax from "../img/ryoji-iwata-n31JPLu8_Pw-unsplash.jpg";
 
