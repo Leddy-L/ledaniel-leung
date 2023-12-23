@@ -1,40 +1,52 @@
 import React from "react";
 
+interface Project {
+  id: number;
+  title: string;
+  subtitle: string;
+  link: string;
+}
+
 const Projects = () => {
+  const projects = [
+    {
+      id: 0,
+      title: "Random Word Generator",
+      subtitle: "LKC Activities",
+      link: "https://asianu.github.io/lkc-puzzle-room/",
+    },
+    {
+      id: 1,
+      title: "Puzzle Room",
+      subtitle: "LKC Activities",
+      link: "https://asianu.github.io/random-word-generator/",
+    },
+    {
+      id: 2,
+      title: "Launchpad",
+      subtitle: "UCSD CSD 170",
+      link: "https://cse170-launchpad.firebaseapp.com/",
+    },
+    {
+      id: 3,
+      title: "Camellia Rd",
+      subtitle: "UCSD COGS 187B",
+      link: "https://camelliard.github.io/",
+    },
+  ];
+
   return (
-    <div className="container centered" id="experience">
-      <div className="projects">
-        <div className="row">
-          <div className="project-card wide" id="random-word-generator">
-            <h1 className="project-title">Random Word Generator</h1>
-            <h2 className="project-subtitle">LKC Activities</h2>
-          </div>
+    <div className="projects">
+      {projects.map((project) => (
+        <div key={project.id}>
+          <p>
+            <a href={project.link} target="_blank">
+              {project.title}
+            </a>
+          </p>
+          <p>{project.subtitle}</p>
         </div>
-
-        <div className="row">
-          <div className="project-card wide" id="lkc-puzzle-room">
-            <h1 className="project-title">Puzzle Room</h1>
-            <h2 className="project-subtitle">LKC Activities</h2>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="project-card" id="launchpad">
-            <h1 className="project-title">Launchpad</h1>
-            <h2 className="project-subtitle">UCSD CSE 170</h2>
-            <a
-              href="https://cse170-launchpad.firebaseapp.com/"
-              target="_blank"
-            ></a>
-          </div>
-
-          <div className="project-card" id="camelliard">
-            <h1 className="project-title">Camellia Rd</h1>
-            <h2 className="project-subtitle">UCSD COGS 187B</h2>
-            <a href="https://camelliard.github.io/" target="_blank"></a>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

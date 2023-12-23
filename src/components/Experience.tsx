@@ -1,21 +1,15 @@
 import React from "react";
 
 const Experience = () => {
-  return (
-    <div className="container centered" id="experience">
-      <div className="projects">
-        <div className="row">
-          <div className="project-card wide" id="qualcomm">
-            Qualcomm
-          </div>
-        </div>
+  const workExperience = ["Qualcomm", "Northrop Grumman"];
 
-        <div className="row">
-          <div className="project-card wide" id="northrop">
-            Northrop Grumman
-          </div>
+  return (
+    <div id="experience">
+      {workExperience.map((item) => (
+        <div id={item}>
+          <p>{item}</p>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
