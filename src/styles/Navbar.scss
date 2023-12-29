@@ -1,6 +1,11 @@
 nav {
   .navbar-brand {
     padding: 0.25em;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   .nav-item {

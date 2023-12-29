@@ -12,7 +12,7 @@ function CustomNavbar() {
       <Container fluid>
         <Navbar.Brand href="#">
           <a className="navbar-brand" href="#">
-            <img src={logo} width="60" height="60" alt="" />
+            <img src={logo} alt="" />
           </a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
