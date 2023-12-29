@@ -20,7 +20,7 @@ const About = () => {
           </p>
         </Col>
         <Col>
-          <img src={parallax} height="100%" width="320em" />
+          <img src={parallax} className="parallax" />
         </Col>
       </Row>
     </Container>
