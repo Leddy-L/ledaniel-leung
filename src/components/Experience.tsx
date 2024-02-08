@@ -1,19 +1,16 @@
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-
 const Experience = () => {
   const workExperience = ["Qualcomm", "Northrop Grumman"];
 
   return (
-    <Container id="Experience">
+    <div id="Experience">
       {workExperience.map((item) => (
-        <Card key={item}>
-          <Card.Body>
-            <Card.Title>{item}</Card.Title>
-          </Card.Body>
-        </Card>
+        <div className="card" key={item}>
+          <div className="card-body">
+            <h1 className="card-title">{item}</h1>
+          </div>
+        </div>
       ))}
-    </Container>
+    </div>
   );
 };
 

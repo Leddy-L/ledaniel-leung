@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 
 interface Project {
   id: number;
@@ -38,20 +36,20 @@ const Projects = () => {
   ];
 
   return (
-    <Container id="Projects">
+    <div id="Projects">
       {projects.map((project) => (
-        <Card key={project.id}>
-          <Card.Body>
-            <Card.Title>
+        <div key={project.id}>
+          <div>
+            <div>
               <a href={project.link} target="_blank">
                 {project.title}
               </a>
-            </Card.Title>
-            <Card.Text>{project.subtitle}</Card.Text>
-          </Card.Body>
-        </Card>
+            </div>
+            <div>{project.subtitle}</div>
+          </div>
+        </div>
       ))}
-    </Container>
+    </div>
   );
 };
 
