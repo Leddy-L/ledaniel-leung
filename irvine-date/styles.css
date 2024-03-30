@@ -37,6 +37,16 @@ input:hover {
   cursor: pointer;
 }
 
+img {
+  object-fit: cover;
+  height: 16rem;
+  width: 16rem;
+}
+
+figcaption {
+  text-align: center;
+}
+
 .container {
   height: 100vh;
   display: flex;
@@ -49,7 +59,8 @@ input:hover {
   display: none;
 }
 
-.options {
+.options,
+.option-revealed {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
