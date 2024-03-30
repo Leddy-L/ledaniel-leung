@@ -25,6 +25,11 @@ $(document).ready(function () {
     $(stage[current_stage]).hide();
     $(".option-revealed").hide();
     current_stage = 0;
+    $("figcaption").empty();
+    mall = "";
+    lunch = "";
+    boba = "";
+
     $(stage[current_stage]).css("display", "flex");
     $(".options").css("display", "flex");
   });
