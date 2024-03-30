@@ -15,7 +15,8 @@ body {
   font-style: normal;
 }
 
-button {
+button,
+input {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -28,7 +29,8 @@ button {
   transition: var(--button-transition);
 }
 
-button:hover {
+button:hover,
+input:hover {
   background-color: var(--yellow);
   transform: scale(1.2);
   transition: var(--button-transition);
@@ -44,5 +46,16 @@ button:hover {
 }
 
 .prompt {
+  display: none;
+}
+
+.options {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+}
+
+.option-revealed {
   display: none;
 }
