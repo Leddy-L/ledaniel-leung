@@ -1,2 +1,4 @@
-*.map
+﻿*.map
 *.scssc
+
+node_modules/
