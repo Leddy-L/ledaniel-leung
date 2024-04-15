@@ -1,4 +1,4 @@
-import "../styles/navbar.scss";
+import "../styles/Navbar.scss";
 import logo from "../logo.svg";
 
 function CustomNavbar() {
