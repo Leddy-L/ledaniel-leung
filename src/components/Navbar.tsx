@@ -1,24 +1,43 @@
 import "../styles/Navbar.scss";
 import logo from "../logo.svg";
 
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
 function CustomNavbar() {
   const navItems = ["About", "Experience", "Projects"];
 
   return (
-    <nav>
-      <div>
-        <a className="nav-brand" href="#">
-          <img src={logo} alt="" />
-        </a>
-      </div>
-      <div id="basic-nav-nav">
-        <div className="ms-auto justify-content-center">
-          {navItems.map((item) => (
-            <a href="#">{item}</a>
-          ))}
-        </div>
-      </div>
-    </nav>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      data-bs-theme="dark"
+      sticky="top"
+      className="bg-body-tertiary"
+    >
+      <Container>
+        <Navbar.Brand href="#home">
+          <img
+            src={logo}
+            alt="LeDaniel Leung Logo"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav"></Navbar.Toggle>
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto">
+            {navItems.map((item) => (
+              <Nav.Link href="">{item}</Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
