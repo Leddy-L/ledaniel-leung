@@ -1,5 +1,9 @@
 import React from "react";
 
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
+
 interface Project {
   id: number;
   title: string;
@@ -33,23 +37,26 @@ const Projects = () => {
       subtitle: "UCSD COGS 187B",
       link: "https://camelliard.github.io/",
     },
+    {
+      id: 4,
+      title: "LeDaniel & Ireme",
+      subtitle: "Wedding Website",
+      link: "#",
+    },
   ];
 
   return (
-    <div id="Projects">
-      {projects.map((project) => (
-        <div key={project.id}>
-          <div>
-            <div>
-              <a href={project.link} target="_blank">
-                {project.title}
-              </a>
-            </div>
-            <div>{project.subtitle}</div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <Container id="Projects">
+      <CardGroup>
+        {projects.map(({ title, subtitle, link }) => (
+          <Card>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{subtitle}</Card.Text>
+            <Card.Link href={link}>Link</Card.Link>
+          </Card>
+        ))}
+      </CardGroup>
+    </Container>
   );
 };
 

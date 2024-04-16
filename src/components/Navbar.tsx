@@ -31,8 +31,8 @@ function CustomNavbar() {
         <Navbar.Toggle aria-controls="navbar-nav"></Navbar.Toggle>
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
-            {navItems.map((item) => (
-              <Nav.Link href="">{item}</Nav.Link>
+            {navItems.map((nav_item) => (
+              <Nav.Link href="">{nav_item}</Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>

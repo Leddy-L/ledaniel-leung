@@ -5,6 +5,7 @@ import {
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
 interface Contact {
   id: number;
@@ -33,10 +34,10 @@ const Sidebar = () => {
 
   return (
     <Container id="Contacts">
-      {contacts.map((contact) => (
-        <a href={contact.link} target="_blank">
-          <FontAwesomeIcon icon={contact.icon} />
-        </a>
+      {contacts.map(({ link, icon }) => (
+        <Button href={link} target="_blank">
+          <FontAwesomeIcon icon={icon} />
+        </Button>
       ))}
     </Container>
   );

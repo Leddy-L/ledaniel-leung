@@ -8,13 +8,13 @@ import "./styles/App.scss";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
       <About />
       <Projects />
       <Experience />
       <Sidebar />
-    </div>
+    </>
   );
 }
 
