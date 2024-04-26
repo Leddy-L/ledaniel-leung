@@ -6,9 +6,9 @@ import Image from "react-bootstrap/Image";
 
 const About = () => {
   return (
-    <Container id="About">
-      <Image src={parallax} className="parallax" />
-    </Container>
+    <div id="About">
+      <Image src={parallax} id="parallax" />
+    </div>
   );
 };
 
