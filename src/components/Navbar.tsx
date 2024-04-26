@@ -21,7 +21,7 @@ function CustomNavbar() {
       className="bg-body-tertiary"
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#">
           <img
             src={logo}
             alt="LeDaniel Leung Logo"
@@ -32,7 +32,7 @@ function CustomNavbar() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
             {navItems.map((nav_item) => (
-              <Nav.Link href="">{nav_item}</Nav.Link>
+              <Nav.Link href={`#${nav_item}`}>{nav_item}</Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>
