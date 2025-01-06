@@ -30,23 +30,17 @@ const Projects = () => {
       title: "Camellia Rd",
       subtitle: "UCSD COGS 187B",
       link: "https://camelliard.github.io/",
-    },
-    {
-      id: 4,
-      title: "LeDaniel & Ireme",
-      subtitle: "Wedding Website",
-      link: "#",
-    },
+    }
   ];
 
   return (
     <div id="Projects">
       <div>
-        {projects.map(({ title, subtitle, link }) => (
+        {projects.map((project: Project) => (
           <div>
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
-            <a href={link}>Link</a>
+            <h1>{project.title}</h1>
+            <h2>{project.subtitle}</h2>
+            <a href={project.link}>Link</a>
           </div>
         ))}
       </div>
