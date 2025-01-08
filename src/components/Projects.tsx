@@ -44,11 +44,11 @@ const Projects = () => {
         {projects.map((project: Project) => (
           <a href={project.link} target="_blank" data-carousel-item>
             <div className="bg-zinc-900">
-              <div className="absolute transition transform hover:flex hover:flex-col hover:justify-center hover:items-center py-auto h-full w-full hover:bg-zinc-900/80 text-zinc-400">
+              <div className="absolute transition transform flex flex-col justify-center items-center py-auto h-full w-full bg-zinc-900/80 text-zinc-400 md:bg-transparent md:text-transparent md:hover:bg-zinc-900/80 md:hover:text-zinc-400">
                 <h1>{project.title}</h1>
                 <h2>{project.subtitle}</h2>
               </div>
-              <img src={project.thumbnail} alt={project.title} />
+              <img className="bg-cover" src={project.thumbnail} alt={project.title} />
             </div>
           </a>
         ))}
