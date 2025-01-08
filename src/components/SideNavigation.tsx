@@ -4,7 +4,8 @@ import Contacts from "./Contacts";
 
 interface NavItem {
   id: number,
-  name: string
+  name: string,
+  link?: string
 }
 
 const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { showSideNavigation: boolean, handleSideNavigationClose: () => void }) => {
@@ -42,11 +43,9 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
     <Drawer open={showSideNavigation} onClose={handleSideNavigationClose} backdrop={!isViewportLargerThanMedium()} aria-label="sidebar" className="bg-zinc-900 shadow-xl md:-translate-x-0 md:w-1/5" >
       <Drawer.Items className="flex flex-col space-y-4">
         <HR />
-        <List>
           {navItems.map((navItem: NavItem) => (
-            <List.Item icon={HiInbox}>{navItem.name}</List.Item>
+            <a href={navItem.link ? navItem.link : "#"} target="_blank">{navItem.name}</a>
           ))}
-        </List>
         <Contacts />
       </Drawer.Items>
     </Drawer>

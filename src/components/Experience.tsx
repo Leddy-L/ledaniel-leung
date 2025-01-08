@@ -31,6 +31,8 @@ const Experience = () => {
     }
   ];
 
+  // see https://flowbite-react.com/docs/components/timeline for timeline-type of view
+
   return (
     <div>
       <h1>Experience</h1>

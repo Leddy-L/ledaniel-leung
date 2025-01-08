@@ -33,7 +33,7 @@ const Contacts = () => {
     ];
 
     return (
-        <ListGroup className="flex justify-center md:justify-start md:pl-4 space-x-4 bg-zinc-900 text-zinc-100 border-none">
+        <ListGroup className="flex justify-center space-x-4 bg-zinc-900 text-zinc-100 border-none">
             {
                 contacts.map((contact: Contact) => (
                     <a href={contact.link} target="_blank">
