@@ -1,22 +1,23 @@
 import Navigation from "./components/Navigation";
-import About from "./components/About";
+import PageBanner from "./components/PageBanner";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import SideNavigation from "./components/SideNavigation";
-import Footer from "./components/Footer";
+import PageFooter from "./components/Footer";
+import Education from "./components/Education";
 
 import "./styles/index.css";
 
 function App() {
   return (
-    <div>
+    <div className="bg-zinc-900 text-zinc-50">
       <Navigation />
-      <SideNavigation />
-      <div className="ml-80">
-        <About />
+      {/* below should be a "page" and each page can be created of components */}
+      <div className="flex flex-col p-20 space-y-8 w-full md:w-4/5 md:ml-[20%]">
+        <PageBanner />
         <Projects />
         <Experience />
-        <Footer />
+        <Education />
+        <PageFooter />
       </div>
     </div>
   );

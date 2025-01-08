@@ -1,3 +1,7 @@
+import { Card } from "flowbite-react";
+import { ListGroup } from "flowbite-react";
+import { CardProps } from "flowbite-react";
+
 interface Project {
   id: number;
   title: string;
@@ -34,8 +38,9 @@ const Projects = () => {
   ];
 
   return (
-    <div id="Projects">
-      <div>
+    <div>
+      <h1>Projects</h1>
+      <Card className="bg-zinc-900">
         {projects.map((project: Project) => (
           <div>
             <h1>{project.title}</h1>
@@ -43,7 +48,7 @@ const Projects = () => {
             <a href={project.link}>Link</a>
           </div>
         ))}
-      </div>
+      </Card>
     </div>
   );
 };

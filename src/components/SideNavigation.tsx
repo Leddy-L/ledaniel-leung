@@ -1,43 +1,15 @@
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faGithub, IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Sidebar } from "flowbite-react";
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser } from "react-icons/hi";
+import Contacts from "./Contacts";
 
 import type { CustomFlowbiteTheme } from "flowbite-react";
-import { Flowbite } from "flowbite-react";
 
-interface Contact {
-  id: number;
-  link: string;
-  icon: IconDefinition;
-}
 interface NavItem {
   id: number,
   name: string
 }
 
 const SideNavigation = () => {
-  const contacts = [
-    {
-      id: 0,
-      link: "https://www.linkedin.com/in/ledaniel-leung",
-      icon: faLinkedinIn,
-    },
-    {
-      id: 1,
-      link: "https://github.com/Asianu",
-      icon: faGithub,
-    },
-    {
-      id: 2,
-      link: "mailto: ledaniel.leung@gmail.com",
-      icon: faEnvelope,
-    },
-  ];
   const navItems = [
     {
       id: 0,
@@ -64,10 +36,10 @@ const SideNavigation = () => {
         on: "w-16",
         off: "w-64"
       },
-      inner: "hidden md:block fixed top-0 left-0 min-h-full z-[10] overflow-y-auto overflow-x-hidden rounded-none bg-slate-900 px-3 py-4 dark:bg-gray-800"
+      inner: "hidden md:block fixed top-0 left-0 z-[10] h-full w-1/5 overflow-y-auto overflow-x-hidden rounded-none px-3 py-4 bg-zinc-900"
     },
     item: {
-      base: "flex items-center justify-center rounded-lg p-2 text-base font-normal text-white hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700",
+      base: "flex items-start justify-start-lg p-2 text-base font-normal text-white hover:bg-zinc-100 focus:text-zinc-900 dark:text-white dark:hover:bg-zinc-700",
       active: "bg-gray-100 dark:bg-gray-700",
       collapsed: {
         insideCollapse: "group w-full pl-8 transition duration-75",
@@ -100,21 +72,17 @@ const SideNavigation = () => {
   };
 
   return (
-    <Sidebar theme={customTheme} aria-label="sidebar" className="">
-      <Sidebar.Items>
-        <Sidebar.ItemGroup className="h-16"></Sidebar.ItemGroup>
-        <Sidebar.ItemGroup>
-          {navItems.map((navItem: NavItem) => (
-            <Sidebar.Item href="#" icon={HiInbox}>{navItem.name}</Sidebar.Item>
-          ))}
-        </Sidebar.ItemGroup>
-      </Sidebar.Items>
-      <div id="Contacts">
-        {contacts.map((contact: Contact) => (
-          <a href={contact.link} target="_blank">
-            <FontAwesomeIcon icon={contact.icon} />
-          </a>
-        ))}
+    <Sidebar theme={customTheme} aria-label="sidebar">
+      <div className="flex flex-col space-y-4">
+        <Sidebar.Items>
+          <Sidebar.ItemGroup className="h-16"></Sidebar.ItemGroup>
+          <Sidebar.ItemGroup>
+            {navItems.map((navItem: NavItem) => (
+              <Sidebar.Item href="#" icon={HiInbox}>{navItem.name}</Sidebar.Item>
+            ))}
+          </Sidebar.ItemGroup>
+        </Sidebar.Items>
+        <Contacts />
       </div>
     </Sidebar>
   );
