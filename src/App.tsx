@@ -12,12 +12,14 @@ function App() {
     <div className="bg-zinc-900 text-zinc-50">
       <Navigation />
       {/* below should be a "page" and each page can be created of components */}
-      <div className="flex flex-col p-20 space-y-8 w-full md:w-4/5 md:ml-[20%]">
+      <div className="px-20 pb-20 pt-40 w-full md:w-4/5 md:ml-[20%]">
         <PageBanner />
-        <Projects />
-        <Experience />
-        <Education />
-        <PageFooter />
+        <div className="flex flex-col mt-[30%] md:mt-[36%] space-y-8">
+          <Projects />
+          <Experience />
+          <Education />
+          <PageFooter />
+        </div>
       </div>
     </div>
   );
