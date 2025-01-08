@@ -41,7 +41,7 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
 
   return (
     <Drawer open={showSideNavigation} onClose={handleSideNavigationClose} backdrop={!isViewportLargerThanMedium()} aria-label="sidebar" className="bg-zinc-900 shadow-xl md:-translate-x-0 md:w-1/5" >
-      <Drawer.Items className="flex flex-col space-y-4">
+      <Drawer.Items className="flex flex-col space-y-4 mt-8">
         <HR />
           {navItems.map((navItem: NavItem) => (
             <a href={navItem.link ? navItem.link : "#"} target="_blank">{navItem.name}</a>
