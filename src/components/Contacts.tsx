@@ -33,11 +33,11 @@ const Contacts = () => {
     ];
 
     return (
-        <ListGroup className="flex justify-center space-x-4 bg-zinc-900 text-zinc-400 border-none">
+        <ListGroup className="flex space-x-5 bg-zinc-900 text-zinc-400 border-none rounded-none">
             {
                 contacts.map((contact: Contact) => (
                     <a href={contact.link} target="_blank">
-                        <FontAwesomeIcon className="text-2xl hover:text-zinc-600" icon={contact.icon} />
+                        <FontAwesomeIcon className="text-2xl hover:text-zinc-200" icon={contact.icon} />
                     </a>
                 ))
             }

@@ -9,7 +9,7 @@ import "./styles/index.css";
 
 function App() {
   return (
-    <div className="bg-zinc-900 text-zinc-50">
+    <div className="bg-zinc-900 text-zinc-200">
       <Navigation />
       {/* below should be a "page" and each page can be created of components */}
       <div className="px-20 pb-20 pt-40 w-full md:w-4/5 md:ml-[20%]">
