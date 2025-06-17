@@ -24,7 +24,7 @@ const education = {
 }
 
     return (
-        <div>
+        <div id="Education">
             <h1>Education</h1>
             <Card className="bg-zinc-900">
                 <div>

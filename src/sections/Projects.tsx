@@ -38,7 +38,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="h-64">
+    <div className="h-64" id="Projects">
       <h1>Projects</h1>
       <Carousel slide={false}>
         {projects.map((project: Project) => (

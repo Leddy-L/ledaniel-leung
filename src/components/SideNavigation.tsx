@@ -13,22 +13,26 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
     {
       id: 0,
       name: "About",
-      emoji: "✨"
+      emoji: "✨",
+      link: "#About"
     },
     {
       id: 1,
       name: "Experience",
-      emoji: "🏋️‍♂️"
+      emoji: "🏋️‍♂️",
+      link: "#Experience"
     },
     {
       id: 2,
       name: "Projects",
-      emoji: "💡"
+      emoji: "💡",
+      linke: "#Projects"
     },
     {
       id: 3,
       name: "Education",
-      emoji: "🎓"
+      emoji: "🎓",
+      link: "#Education"
     }
   ];
 
@@ -44,10 +48,10 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
   }
 
   return (
-    <Drawer open={showSideNavigation} onClose={handleSideNavigationClose} backdrop={!isViewportLargerThanMedium()} aria-label="sidebar" className="bg-zinc-900 shadow-xl md:-translate-x-0 border-r border-zinc-600" >
-      <Drawer.Items className="flex flex-col mt-14 text-zinc-400 pb-4">
+    <Drawer open={showSideNavigation} onClose={handleSideNavigationClose} backdrop={!isViewportLargerThanMedium()} aria-label="sidebar" className="bg-zinc-900 shadow-xl mt-16 border-r border-zinc-600 md:w-1/5 md:-translate-x-0 " >
+      <Drawer.Items className="flex flex-col text-zinc-400 pb-4">
         {navItems.map((navItem: NavItem) => (
-          <a href={navItem.link ? navItem.link : "#"} target="_blank" className="hover:text-zinc-200">
+          <a href={navItem.link ? navItem.link : "#"} target="_self" className="hover:text-zinc-200">
             <div className="flex justify-between px-2 py-1 hover:bg-slate-800">
               <p>{navItem.name}</p>
               <p>{navItem.emoji}</p>

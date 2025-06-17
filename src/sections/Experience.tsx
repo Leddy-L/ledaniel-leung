@@ -34,7 +34,7 @@ const Experience = () => {
   // see https://flowbite-react.com/docs/components/timeline for timeline-type of view
 
   return (
-    <div>
+    <div id="Experience">
       <h1>Experience</h1>
       {workExperience.map((workExperience: Experience) => (
         <Card className="bg-zinc-900">
