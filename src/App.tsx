@@ -13,7 +13,7 @@ function App() {
     <div className="bg-zinc-900 text-zinc-200">
       <Navigation />
       {/* below should be a "page" and each page can be created of components */}
-      <div className="px-10 pb-10 mt-16 w-full md:w-4/5 md:ml-[20%]">
+      <div className="p-10 mt-16 w-full md:w-4/5 md:ml-[20%]">
         {/* <PageBanner /> */}
         <div className="flex flex-col space-y-8">
           <About />

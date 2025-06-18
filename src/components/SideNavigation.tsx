@@ -26,7 +26,7 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
       id: 2,
       name: "Projects",
       emoji: "💡",
-      linke: "#Projects"
+      link: "#Projects"
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const SideNavigation = ({ showSideNavigation, handleSideNavigationClose }: { sho
       <Drawer.Items className="flex flex-col text-zinc-400 pb-4">
         {navItems.map((navItem: NavItem) => (
           <a href={navItem.link ? navItem.link : "#"} target="_self" className="hover:text-zinc-200">
-            <div className="flex justify-between px-2 py-1 hover:bg-slate-800">
+            <div className="flex justify-between px-2 py-1 hover:bg-zinc-800">
               <p>{navItem.name}</p>
               <p>{navItem.emoji}</p>
             </div>
