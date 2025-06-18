@@ -1,5 +1,5 @@
 import { Footer, FooterBrand } from "flowbite-react";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 
 const PageFooter = () => {
   return (

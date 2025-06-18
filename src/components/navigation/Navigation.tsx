@@ -2,8 +2,7 @@ import { Avatar } from "flowbite-react";
 import { Navbar } from "flowbite-react";
 import Contacts from "./Contacts";
 import SideNavigation from "./SideNavigation";
-import logo from "../img/logo240.png"; // prop should be passed into img of Avatar
-import avatar from "../img/cat.jpg";
+import avatar from "../../img/cat.jpg";
 import { useState } from "react";
 
 function Navigation() {

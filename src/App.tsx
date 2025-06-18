@@ -1,9 +1,9 @@
-import Navigation from "./components/Navigation";
-import PageBanner from "./components/PageBanner";
+import Navigation from "./components/navigation/Navigation";
+import PageBanner from "./components/navigation/PageBanner";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
-import PageFooter from "./components/Footer";
+import PageFooter from "./components/navigation/Footer";
 import Education from "./sections/Education";
 
 import "./styles/index.css";
