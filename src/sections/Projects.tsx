@@ -1,4 +1,5 @@
 import { Card } from "flowbite-react";
+import SectionHeader from "../components/SectionHeader";
 
 import lkc_puzzle_room_thumbnail from "../img/lkc-puzzle-room-thumbnail.png";
 import random_word_generator_thumbnail from "../img/random-word-generator-thumbnail.png";
@@ -39,13 +40,15 @@ const Projects = () => {
 
   return (
     <div id="Projects">
-      <h1>Projects</h1>
+      <SectionHeader>Projects 💡</SectionHeader>
+      <div className="flex flex-row pt-4 space-x-4 flex-nowrap overflow-x-scroll">
         {projects.map((project: Project) => (
-          <Card className="bg-zinc-900" imgAlt={project.title} imgSrc={project.thumbnail} >
+          <Card className="bg-zinc-900 border-zinc-600 min-w-48 max-w-48 md:min-w-96 md:max-w-96" imgAlt={project.title} imgSrc={project.thumbnail} >
             <h1>{project.title}</h1>
             <h2>{project.subtitle}</h2>
           </Card>
         ))}
+      </div>
     </div>
   );
 };

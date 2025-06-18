@@ -1,4 +1,5 @@
 import { Card } from "flowbite-react";
+import SectionHeader from "../components/SectionHeader";
 
 interface Experience {
   id: Number,
@@ -35,16 +36,18 @@ const Experience = () => {
 
   return (
     <div id="Experience">
-      <h1>Experience</h1>
-      {workExperience.map((workExperience: Experience) => (
-        <Card className="bg-zinc-900">
-          <h1>{workExperience.name}</h1>
-          <h2>{workExperience.years}</h2>
-          <h2>{workExperience.title}</h2>
-          <h2>{workExperience.location}</h2>
-          <p>{workExperience.description}</p>
-        </Card>
-      ))}
+      <SectionHeader>Experience 🏋️‍♂️</SectionHeader>
+      <div className="flex flex-col pt-4 space-y-4">
+        {workExperience.map((workExperience: Experience) => (
+          <Card className="bg-zinc-900 border-zinc-600">
+            <h1>{workExperience.name}</h1>
+            <h2>{workExperience.years}</h2>
+            <h2>{workExperience.title}</h2>
+            <h2>{workExperience.location}</h2>
+            <p>{workExperience.description}</p>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 };
