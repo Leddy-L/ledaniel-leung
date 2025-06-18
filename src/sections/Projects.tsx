@@ -1,4 +1,4 @@
-import { Card, Carousel } from "flowbite-react";
+import { Card } from "flowbite-react";
 
 import lkc_puzzle_room_thumbnail from "../img/lkc-puzzle-room-thumbnail.png";
 import random_word_generator_thumbnail from "../img/random-word-generator-thumbnail.png";
@@ -38,21 +38,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="h-64" id="Projects">
+    <div id="Projects">
       <h1>Projects</h1>
-      <Carousel slide={false}>
         {projects.map((project: Project) => (
-          <a href={project.link} target="_blank" data-carousel-item>
-            <div className="bg-zinc-900">
-              <div className="absolute transition transform flex flex-col justify-center items-center py-auto h-full w-full bg-zinc-900/80 text-zinc-400 md:bg-transparent md:text-transparent md:hover:bg-zinc-900/80 md:hover:text-zinc-400">
-                <h1>{project.title}</h1>
-                <h2>{project.subtitle}</h2>
-              </div>
-              <img className="bg-cover" src={project.thumbnail} alt={project.title} />
-            </div>
-          </a>
+          <Card className="bg-zinc-900" imgAlt={project.title} imgSrc={project.thumbnail} >
+            <h1>{project.title}</h1>
+            <h2>{project.subtitle}</h2>
+          </Card>
         ))}
-      </Carousel>
     </div>
   );
 };
