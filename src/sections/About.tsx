@@ -1,3 +1,6 @@
+import Title from '../components/Title'
+import Subtitle from '../components/Subtitle'
+
 const About = () => {
     const identities = [
         "Software Engineer",
@@ -11,8 +14,8 @@ const About = () => {
 
     return (
         <div className="border-b border-zinc-600 pb-8" id="About">
-            <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">LeDaniel Leung - <span>{identities[0]}</span></h1>
-            <p className="mt-2 text-md sm:text-lg md:text-2xl text-zinc-400">Get to know this intrepid human of the internet by seeing what he's done.</p>
+            <Title>LeDaniel Leung - <span>{identities[0]}</span></Title>
+            <Subtitle>Get to know this intrepid human of the internet by seeing what he's done.</Subtitle>
         </div >
     );
 };
