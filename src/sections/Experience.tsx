@@ -1,55 +1,65 @@
-import { Card } from "flowbite-react";
-import SectionHeader from "../components/SectionHeader";
+import { Card } from 'flowbite-react'
+import SectionHeader from '../components/SectionHeader'
+import CardText from '../components/CardText'
+import CardTitle from '../components/CardTitle'
+import CardSubtitle from '../components/CardSubtitle'
 
 interface Experience {
-  id: Number,
-  name: String,
-  logo?: ImageData,
-  years: String,
-  title: String,
-  location: String,
-  description: String,
-  technologies?: Array<ImageData>
+    id: number
+    name: string
+    logo?: ImageData
+    years: string
+    title: string
+    location: string
+    description: string
+    technologies?: Array<ImageData>
 }
 
 const Experience = () => {
-  const workExperience = [
-    {
-      id: 0,
-      name: "Qualcomm",
-      years: "2022 - Present",
-      title: "Software Engineer",
-      location: "San Diego, CA.",
-      description: "At Qualcomm, I supported the Software Automation and Tools (QSWAT) team by implementing new features, optimizing legacy applications, and supporting users daily, with the following technologies:"
-    },
-    {
-      id: 1,
-      name: "Northrop Grumman",
-      years: "2019 - 2022",
-      title: "Systems Engineer",
-      location: "San Diego, CA.",
-      description: "As an intern-to-fulltime hire, I worked on various middleware applications that supported the communications systems on avionic vehicles."
-    }
-  ];
+    const workExperience = [
+        {
+            id: 0,
+            name: 'Qualcomm 📲',
+            years: '2022 - Present',
+            title: 'Software Engineer',
+            location: 'San Diego, CA.',
+            description:
+                'I currently support the Software Automation and Tools (QSWAT) team by driving feature implementation, optimizing legacy applications, and supporting users daily.',
+        },
+        {
+            id: 1,
+            name: 'Northrop Grumman 🚁',
+            years: '2019 - 2022',
+            title: 'Systems Engineer',
+            location: 'San Diego, CA.',
+            description:
+                'As an intern-to-fulltime hire, I worked on various middleware applications that supported the communications systems on avionic vehicles.',
+        },
+    ]
 
-  // see https://flowbite-react.com/docs/components/timeline for timeline-type of view
+    // see https://flowbite-react.com/docs/components/timeline for timeline-type of view
 
-  return (
-    <div id="Experience">
-      <SectionHeader>Experience 🏋️‍♂️</SectionHeader>
-      <div className="flex flex-col pt-4 space-y-4">
-        {workExperience.map((workExperience: Experience) => (
-          <Card className="bg-zinc-900 border-zinc-600">
-            <h1>{workExperience.name}</h1>
-            <h2>{workExperience.years}</h2>
-            <h2>{workExperience.title}</h2>
-            <h2>{workExperience.location}</h2>
-            <p>{workExperience.description}</p>
-          </Card>
-        ))}
-      </div>
-    </div>
-  );
-};
+    return (
+        <div id="Experience">
+            <SectionHeader>Experience 🏋️‍♂️</SectionHeader>
+            <div className="flex flex-col pt-4 space-y-4">
+                {workExperience.map((workExperience: Experience) => (
+                    <Card
+                        className="bg-zinc-900 border-zinc-600"
+                        key={workExperience.id}
+                    >
+                        <CardTitle>
+                            {workExperience.name} - {workExperience.title}
+                        </CardTitle>
+                        <CardSubtitle>
+                            {workExperience.years}, {workExperience.location}
+                        </CardSubtitle>
+                        <CardText>{workExperience.description}</CardText>
+                    </Card>
+                ))}
+            </div>
+        </div>
+    )
+}
 
-export default Experience;
+export default Experience
