@@ -4,7 +4,7 @@ import CardText from '../components/CardText'
 import CardTitle from '../components/CardTitle'
 import CardSubtitle from '../components/CardSubtitle'
 
-interface Experience {
+interface IExperience {
     id: number
     name: string
     logo?: ImageData
@@ -43,7 +43,7 @@ const Experience = () => {
         <div id="Experience">
             <SectionHeader>Experience 🏋️‍♂️</SectionHeader>
             <div className="flex flex-col pt-4 space-y-4">
-                {workExperience.map((workExperience: Experience) => (
+                {workExperience.map((workExperience: IExperience) => (
                     <Card
                         className="bg-zinc-900 border-zinc-600"
                         key={workExperience.id}

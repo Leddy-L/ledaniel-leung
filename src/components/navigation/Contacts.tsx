@@ -32,7 +32,12 @@ const Contacts = () => {
     return (
         <ListGroup className="flex space-x-5 bg-zinc-900 text-zinc-400 border-none rounded-none">
             {contacts.map((contact: Contact) => (
-                <a href={contact.link} key={contact.id} target="_blank">
+                <a
+                    href={contact.link}
+                    key={contact.id}
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <FontAwesomeIcon
                         className="text-2xl hover:text-zinc-200"
                         icon={contact.icon}

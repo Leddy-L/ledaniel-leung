@@ -9,7 +9,7 @@ import lkc_puzzle_room_thumbnail from '../img/lkc-puzzle-room-thumbnail.png'
 import random_word_generator_thumbnail from '../img/random-word-generator-thumbnail_small.png'
 import camellia_rd_thumbnail from '../img/camellia-rd-thumbnail_small.png'
 
-interface Project {
+interface IProject {
     id: number
     title: string
     subtitle: string
@@ -53,7 +53,7 @@ const Projects = () => {
         <div id="Projects">
             <SectionHeader>Projects 💡</SectionHeader>
             <div className="flex flex-row pt-4 space-x-4 flex-nowrap overflow-x-scroll">
-                {projects.map((project: Project) => (
+                {projects.map((project: IProject) => (
                     <Card
                         className="bg-zinc-900 border-zinc-600 min-w-60 max-w-60 md:min-w-96 md:max-w-96 horizontal"
                         imgAlt={project.title}
