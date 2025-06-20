@@ -70,7 +70,7 @@ const Projects = () => {
                         <Button
                             pill
                             color="dark"
-                            href={project.link}
+                            href={project.disabled ? '' : project.link}
                             target="_blank"
                             disabled={project.disabled}
                         >
