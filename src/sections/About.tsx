@@ -22,7 +22,7 @@ const About = () => {
         for (var i = 0; i < shuffleCount; i++) {
             let index =
                 (Math.trunc(Math.random() * i) % (identities.length - 1)) + 1
-            if (index == identities.length - 1) {
+            if (index === identities.length - 1) {
                 swapIndices(index, 1)
             } else {
                 swapIndices(index, index + 1)
