@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1)) /* #18181b */;
 }
 
 Typewriter {
