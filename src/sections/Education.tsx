@@ -15,7 +15,7 @@ const Education = () => {
     }
 
     return (
-        <div id="Education">
+        <div className="scroll-mt-24" id="Education">
             <SectionHeader>Education 🎓</SectionHeader>
             <div className="flex flex-col pt-4">
                 <Card className="bg-zinc-900 border-zinc-600">

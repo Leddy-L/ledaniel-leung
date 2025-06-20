@@ -50,7 +50,7 @@ const Projects = () => {
     ]
 
     return (
-        <div id="Projects">
+        <div className="scroll-mt-24" id="Projects">
             <SectionHeader>Projects 💡</SectionHeader>
             <div className="flex flex-row pt-4 space-x-4 flex-nowrap overflow-x-scroll">
                 {projects.map((project: IProject) => (
