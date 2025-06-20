@@ -14,6 +14,7 @@ interface IProject {
     title: string
     subtitle: string
     link: string
+    disabled: boolean
     description: string
     thumbnail?: string
 }
@@ -25,6 +26,7 @@ const Projects = () => {
             title: 'LKC Puzzle Room',
             subtitle: 'LKC Activities',
             link: 'https://ledanielleung.com/lkc-puzzle-room/',
+            disabled: true,
             description:
                 'Escape Room-style puzzle made for kids as a group activity. Made during lockdown.',
             thumbnail: lkc_puzzle_room_thumbnail,
@@ -34,6 +36,7 @@ const Projects = () => {
             title: 'Random Word Generator',
             subtitle: 'LKC Activities',
             link: 'https://ledanielleung.com/random-word-generator/',
+            disabled: true,
             description:
                 'Generate silly art prompts for kids. Made during lockdown.',
             thumbnail: random_word_generator_thumbnail,
@@ -43,6 +46,7 @@ const Projects = () => {
             title: 'Camellia Rd',
             subtitle: 'UCSD COGS 187B',
             link: 'https://camelliard.github.io/',
+            disabled: false,
             description:
                 'Mockup design project for San Diego-based boba tea shop.',
             thumbnail: camellia_rd_thumbnail,
@@ -68,6 +72,7 @@ const Projects = () => {
                             color="dark"
                             href={project.link}
                             target="_blank"
+                            disabled={project.disabled}
                         >
                             Explore
                             <HiOutlineArrowRight className="ml-2 h-5 w-5" />
