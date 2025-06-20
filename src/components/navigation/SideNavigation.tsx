@@ -68,6 +68,7 @@ const SideNavigation = ({
                         key={navItem.id}
                         target="_self"
                         className="hover:text-zinc-200"
+                        onClick={handleSideNavigationClose}
                     >
                         <div className="flex justify-between px-2 py-1 hover:bg-zinc-800">
                             <p>{navItem.name}</p>
