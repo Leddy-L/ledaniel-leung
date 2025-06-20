@@ -40,7 +40,7 @@ const Experience = () => {
     // see https://flowbite-react.com/docs/components/timeline for timeline-type of view
 
     return (
-        <div id="Experience">
+        <div className="scroll-mt-24" id="Experience">
             <SectionHeader>Experience 🏋️‍♂️</SectionHeader>
             <div className="flex flex-col pt-4 space-y-4">
                 {workExperience.map((workExperience: IExperience) => (
