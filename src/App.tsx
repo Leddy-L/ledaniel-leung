@@ -1,24 +1,35 @@
-import About from './sections/About'
-import Education from './sections/Education'
-import Experience from './sections/Experience'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+
 import Navigation from './components/navigation/Navigation'
-import Projects from './sections/Projects'
-import PageFooter from './components/navigation/Footer'
+import PageNotFound from './pages/PageNotFound'
+import Landing from './pages/Landing'
+import LKCPuzzleRoom from './pages/LKCPuzzleRoom'
+import LKCRandomWordGenerator from './pages/LKCRandomWordGenerator'
 
 import './styles/index.css'
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Landing />,
+        errorElement: <PageNotFound />,
+    },
+    {
+        path: '/lkc-puzzle-room',
+        element: <LKCPuzzleRoom />,
+    },
+    {
+        path: '/lkc-random-word-generator',
+        element: <LKCRandomWordGenerator />,
+    },
+])
 
 function App() {
     return (
         <div className="bg-zinc-900 text-zinc-200">
             <Navigation />
             <div className="p-10 mt-16 w-full md:w-4/5 md:ml-[20%]">
-                <div className="flex flex-col space-y-8">
-                    <About />
-                    <Experience />
-                    <Projects />
-                    <Education />
-                    <PageFooter />
-                </div>
+                <RouterProvider router={router} />
             </div>
         </div>
     )

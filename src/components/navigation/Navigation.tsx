@@ -18,7 +18,7 @@ function Navigation() {
                 fluid
                 className="fixed top-0 min-w-full bg-zinc-900 h-16 border-b border-zinc-600 shadow-xl p-3 z-50"
             >
-                <Navbar.Brand href="#">
+                <Navbar.Brand href="/">
                     <Avatar
                         alt="avatar of LeDaniel"
                         img={avatar}

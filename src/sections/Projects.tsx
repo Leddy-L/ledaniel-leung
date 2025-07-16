@@ -12,11 +12,13 @@ import camellia_rd_thumbnail from '../img/camellia-rd-thumbnail_small.png'
 interface IProject {
     id: number
     title: string
+    emoji: string
     subtitle: string
     link: string
     disabled: boolean
     description: string
     thumbnail?: string
+    target: string
 }
 
 const Projects = () => {
@@ -24,32 +26,38 @@ const Projects = () => {
         {
             id: 0,
             title: 'LKC Puzzle Room',
+            emoji: '🧩',
             subtitle: 'LKC Activities',
-            link: 'https://ledanielleung.com/lkc-puzzle-room/',
-            disabled: true,
+            link: '/lkc-puzzle-room',
+            disabled: false,
             description:
                 'Escape Room-style puzzle made for kids as a group activity. Made during lockdown.',
             thumbnail: lkc_puzzle_room_thumbnail,
+            target: '_self',
         },
         {
             id: 1,
             title: 'Random Word Generator',
+            emoji: '🔤',
             subtitle: 'LKC Activities',
-            link: 'https://ledanielleung.com/random-word-generator/',
-            disabled: true,
+            link: '/lkc-random-word-generator',
+            disabled: false,
             description:
                 'Generate silly art prompts for kids. Made during lockdown.',
             thumbnail: random_word_generator_thumbnail,
+            target: '_self',
         },
         {
             id: 2,
             title: 'Camellia Rd',
+            emoji: '🧋',
             subtitle: 'UCSD COGS 187B',
             link: 'https://camelliard.github.io/',
             disabled: false,
             description:
                 'Mockup design project for San Diego-based boba tea shop.',
             thumbnail: camellia_rd_thumbnail,
+            target: '_blank',
         },
     ]
 
@@ -64,14 +72,16 @@ const Projects = () => {
                         imgSrc={project.thumbnail}
                         key={project.id}
                     >
-                        <CardTitle>{project.title}</CardTitle>
+                        <CardTitle>
+                            {project.title} {project.emoji}
+                        </CardTitle>
                         <CardSubtitle>{project.subtitle}</CardSubtitle>
                         <CardText>{project.description}</CardText>
                         <Button
                             pill
                             color="dark"
                             href={project.disabled ? '' : project.link}
-                            target="_blank"
+                            target={project.target}
                             disabled={project.disabled}
                         >
                             Explore

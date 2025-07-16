@@ -20,25 +20,25 @@ const SideNavigation = ({
             id: 0,
             name: 'About',
             emoji: '✨',
-            link: '#About',
+            link: '/#About',
         },
         {
             id: 1,
             name: 'Experience',
             emoji: '🏋️‍♂️',
-            link: '#Experience',
+            link: '/#Experience',
         },
         {
             id: 2,
             name: 'Projects',
             emoji: '💡',
-            link: '#Projects',
+            link: '/#Projects',
         },
         {
             id: 3,
             name: 'Education',
             emoji: '🎓',
-            link: '#Education',
+            link: '/#Education',
         },
     ]
 
