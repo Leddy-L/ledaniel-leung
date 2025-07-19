@@ -66,10 +66,7 @@ const About = () => {
                     }}
                 />
             </Title>
-            <Subtitle>
-                Get to know this intrepid human of the internet by seeing what
-                he's done.
-            </Subtitle>
+            <Subtitle>Just a place to put my stuff on the internet.</Subtitle>
         </div>
     )
 }

@@ -3,7 +3,7 @@ interface CardTextProps {
 }
 
 const CardText = ({ children }: CardTextProps) => {
-    return <p className="text-zinc-300">{children}</p>
+    return <div className="text-zinc-300">{children}</div>
 }
 
 export default CardText

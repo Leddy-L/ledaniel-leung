@@ -55,7 +55,7 @@ const Projects = () => {
             link: 'https://camelliard.github.io/',
             disabled: false,
             description:
-                'Mockup design project for San Diego-based boba tea shop.',
+                'A mockup design project for a San Diego boba shop where I gained hands-on experience in UI/UX, client communication, and branding.',
             thumbnail: camellia_rd_thumbnail,
             target: '_blank',
         },
@@ -64,10 +64,10 @@ const Projects = () => {
     return (
         <div className="scroll-mt-24" id="Projects">
             <SectionHeader>Projects 💡</SectionHeader>
-            <div className="flex flex-row pt-4 space-x-4 flex-nowrap overflow-x-scroll">
+            <div className="flex flex-row pt-4 space-x-4 flex-nowrap overflow-x-scroll ">
                 {projects.map((project: IProject) => (
                     <Card
-                        className="bg-zinc-900 border-zinc-600 min-w-60 max-w-60 md:min-w-96 md:max-w-96 horizontal"
+                        className="bg-zinc-900 border-zinc-600 min-w-60 max-w-60 md:min-w-96 md:max-w-96 flex horizontal"
                         imgAlt={project.title}
                         imgSrc={project.thumbnail}
                         key={project.id}

@@ -3,7 +3,7 @@ interface TextProps {
 }
 
 const Text = ({ children }: TextProps) => {
-    return <p className="text-zinc-300">{children}</p>
+    return <div className="text-zinc-300">{children}</div>
 }
 
 export default Text
