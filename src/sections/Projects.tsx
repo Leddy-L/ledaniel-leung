@@ -31,7 +31,7 @@ const Projects = () => {
             link: '/lkc-puzzle-room',
             disabled: false,
             description:
-                'Escape Room-style puzzle made for kids as a group activity. Made during lockdown.',
+                'A solo-developed Unity escape room game blending interactive puzzles, playful design, and purpose-driven storytelling.',
             thumbnail: lkc_puzzle_room_thumbnail,
             target: '_self',
         },
@@ -43,7 +43,7 @@ const Projects = () => {
             link: '/lkc-random-word-generator',
             disabled: false,
             description:
-                'Generate silly art prompts for kids. Made during lockdown.',
+                'A kid-friendly Unity game that mixes spelling, numbers, and silly word prompts to spark creativity and learning.',
             thumbnail: random_word_generator_thumbnail,
             target: '_self',
         },

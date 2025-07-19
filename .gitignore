@@ -32,3 +32,5 @@ Design.sketch
 *.scssc
 
 node_modules/
+
+Archive/
